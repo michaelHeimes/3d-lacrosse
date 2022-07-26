@@ -1,0 +1,138 @@
+header.site-header {
+	transition: transform .5s ease;
+	
+	.top-bar-wrap {
+		background-color: $topbar-background;
+	}
+	
+	#top-bar-menu {
+		padding-top: .2rem;
+		padding-bottom: .2rem;
+		
+		@include breakpoint(tablet) {
+			padding-top: .35rem;
+			padding-bottom: 0;
+		}
+		
+		.top-bar-left {
+			max-width: 160px;
+			
+			@include breakpoint(medium) {
+				max-width: 100%;
+			}
+			
+		}
+		
+		li.logo {
+			
+			&.desktop {
+				a {
+					padding: 0;
+					display: inline-block;
+					position: relative;
+				    top: -20px;
+				}
+			}
+			
+		}
+			
+		#region-nav,
+		#main-nav {
+			align-items: center;
+			>li {
+				margin: 1.05rem 0 1.3rem 1.8rem;
+				
+				a {
+					color: $white;
+					font-size: rem-calc(18);
+					text-transform: uppercase;
+					letter-spacing: .075px;
+					
+					@include breakpoint(large) {
+						font-size: rem-calc(22);
+					}
+					
+				&:hover {
+					text-decoration: underline;
+				}
+					
+				}
+				
+			&.menu-item-has-children {
+				margin-top: -.4rem;
+				margin-bottom: 0;
+			
+				a {
+					padding-right: 2.28rem;
+					
+					&:after {
+						right: 12px;
+						width: 10px;
+						height: 5px;
+						border: 0;
+						background-size: contain;
+					    background-position: center;
+					    background-repeat: no-repeat;						
+// 						background-image: url(../images/chev-down-white.svg);
+					}
+					
+				}
+				
+				ul.submenu {
+					li {
+						a {
+
+							
+						&:hover {
+
+						}
+							
+						}
+						
+					}
+				}
+	
+			}
+							
+			}
+		}
+		
+		.menu-toggle-wrap {
+		    width: auto;
+		    flex: 0 0 auto;
+		    
+		    a#menu-toggle {
+			    padding: 0;
+			    width: 36px;
+			    height: 36px;
+			    position: relative;
+			    
+			    span {
+				    position: absolute;
+				    left: 0;
+				    right: 0;
+				    width: 36px;
+				    height: 4px;
+				    background-color: $white;
+				    
+				    &:nth-child(1) {
+					    top: 4px;
+				    }
+
+				    &:nth-child(2) {
+					    top: 16px;
+				    }
+				    
+				    &:nth-child(3) {
+					    bottom: 4px;
+				    }
+				    				    
+			    }
+			    
+		    }
+		    
+		}
+	
+	}
+	
+}
