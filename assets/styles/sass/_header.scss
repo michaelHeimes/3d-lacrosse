@@ -1,4 +1,5 @@
 header.site-header {
+	z-index: 555;
 	transition: transform .5s ease;
 	
 	.top-bar-wrap {
@@ -40,16 +41,18 @@ header.site-header {
 		#main-nav {
 			align-items: center;
 			>li {
-				margin: 1.05rem 0 1.3rem 1.8rem;
+				margin: 1rem .3rem 1rem;
 				
 				a {
+					font-family: $font-league;
 					color: $white;
-					font-size: rem-calc(18);
+					font-size: rem-calc(21);
 					text-transform: uppercase;
-					letter-spacing: .075px;
+					letter-spacing: 2.1px;
 					
 					@include breakpoint(large) {
-						font-size: rem-calc(22);
+						font-size: rem-calc(14);
+						letter-spacing: 1.4px;
 					}
 					
 				&:hover {
@@ -59,24 +62,6 @@ header.site-header {
 				}
 				
 			&.menu-item-has-children {
-				margin-top: -.4rem;
-				margin-bottom: 0;
-			
-				a {
-					padding-right: 2.28rem;
-					
-					&:after {
-						right: 12px;
-						width: 10px;
-						height: 5px;
-						border: 0;
-						background-size: contain;
-					    background-position: center;
-					    background-repeat: no-repeat;						
-// 						background-image: url(../images/chev-down-white.svg);
-					}
-					
-				}
 				
 				ul.submenu {
 					li {

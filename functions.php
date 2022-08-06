@@ -244,5 +244,5 @@ require_once(get_template_directory().'/inc/disable-gutenberg.php');
 // require_once(get_template_directory().'/inc/login.php'); 
 
 // Customize the WordPress admin
-// require_once(get_template_directory().'/inc/admin.php'); 
+require_once(get_template_directory().'/inc/admin.php'); 
 

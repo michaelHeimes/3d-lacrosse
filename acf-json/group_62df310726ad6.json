@@ -45,8 +45,8 @@
         },
         {
             "key": "field_62df318c6854b",
-            "label": "Title",
-            "name": "hero_title",
+            "label": "Heading",
+            "name": "hero_heading",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -65,7 +65,7 @@
         {
             "key": "field_62df31c86854c",
             "label": "Image & Copy Card",
-            "name": "image_&_copy_card",
+            "name": "hero_image_&_copy_card",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -566,5 +566,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658795991
+    "modified": 1659817562
 }

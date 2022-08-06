@@ -72,7 +72,7 @@ add_filter('admin_footer_text', 'lacrosse_3d_custom_admin_footer');
 
 	// add editor-style.css
 	function theme_editor_style() {
-		add_editor_style( get_template_directory_uri() . '/assets/css/editor-style.css' );
+		add_editor_style( get_template_directory_uri() . '/assets/styles/style.min.css' );
 	}
 	add_action('init', 'theme_editor_style');
 

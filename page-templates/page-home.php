@@ -8,59 +8,65 @@
  */
 
 get_header();
+$fields = get_fields();
 ?>
 	<div class="content">
-		<div class="grid-container">
-			<div class="inner-content grid-x grid-padding-x">
+		<div class="inner-content grid-x grid-padding-x">
 
-				<main id="primary" class="site-main">
-			
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
-							
-						</header><!-- .entry-header -->
-					
-					
-						<div class="entry-content">
-							<?php
-							the_content();
-					
-							wp_link_pages(
-								array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lacrosse-3d' ),
-									'after'  => '</div>',
-								)
-							);
-							?>
-						</div><!-- .entry-content -->
-					
-						<?php if ( get_edit_post_link() ) : ?>
-							<footer class="entry-footer">
-								<?php
-								edit_post_link(
-									sprintf(
-										wp_kses(
-											/* translators: %s: Name of current post. Only visible to screen readers */
-											__( 'Edit <span class="screen-reader-text">%s</span>', 'lacrosse-3d' ),
-											array(
-												'span' => array(
-													'class' => array(),
-												),
-											)
-										),
-										wp_kses_post( get_the_title() )
-									),
-									'<span class="edit-link">',
-									'</span>'
-								);
-								?>
-							</footer><!-- .entry-footer -->
+			<main id="primary" class="site-main">
+		
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				
+					<header class="entry-header home-banner">
+						<?php 
+						$image = get_field('hero_background_image');
+						if( !empty( $image ) ): ?>
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 						<?php endif; ?>
-					</article><!-- #post-<?php the_ID(); ?> -->
-			
-				</main><!-- #main -->
-					
-			</div>
+					</header><!-- .entry-header -->
+				
+					<div class="entry-content">
+						<div class="img-copy-card img-right">
+							<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/home-hero-bg.svg);"></div>
+							<div class="grid-container">
+								<div class="grid-x grid-padding-x tablet-flex-dir-row-reverse">
+									<?php 
+										$hero_image_copy_card = $fields['hero_image_&_copy_card'];
+										if( !empty($hero_image_copy_card) ):	
+									?>
+									<div class="left cell small-12 tablet-6">
+										<?php 
+											if( !empty($hero_image_copy_card['image']) ):
+											$image = $hero_image_copy_card['image'];
+										?>
+										<div class="img-wrap">
+											<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+										</div>
+										<?php endif;?>
+									</div>
+									<div class="right black-bg cell small-12 tablet-6">
+										<?php 
+											if( !empty($hero_image_copy_card['text']) ):
+										?>
+										<div class="text-wrap black-bg">
+											<?php echo $hero_image_copy_card['text'];?>
+										</div>
+										<?php endif;?>
+									</div>									
+									<?php endif;?>
+								</div>
+							</div>
+						</div>
+					</div><!-- .entry-content -->
+				
+					<footer class="entry-footer">
+
+					</footer><!-- .entry-footer -->
+						
+				</article><!-- #post-<?php the_ID(); ?> -->
+		
+			</main><!-- #main -->
+				
 		</div>
 	</div>
 

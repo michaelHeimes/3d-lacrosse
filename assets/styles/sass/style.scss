@@ -1,24 +1,13 @@
 @charset "UTF-8";
-/*--------------------------------------------------------------
-# Fonts
---------------------------------------------------------------*/
-	@font-face{
-	font-family:"VTF League W05 Bold";
-	src:url("../fonts/6327559/d556c18c-3e71-4b65-a902-4ae24f7f7607.woff2") format("woff2"),url("../fonts/6327559/badce717-fd22-4fe0-81a9-553045855269.woff") format("woff");
-}
 
-
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
-$font-league: "VTF League W05 Bold";
-
+@import "variables";
 
 /*--------------------------------------------------------------
 # Foundation
 --------------------------------------------------------------*/
 
 @import "foundation-settings";
+@import "vendor/foundation/vendor/normalize";
 @import "vendor/foundation/foundation";
 
 // Global styles
@@ -72,7 +61,7 @@ $font-league: "VTF League W05 Bold";
 
 // Helpers
 @include foundation-float-classes;
-// @include foundation-flex-classes;
+@include foundation-flex-classes;
 @include foundation-visibility-classes;
 // @include foundation-prototype-classes;
 
@@ -83,4 +72,9 @@ $font-league: "VTF League W05 Bold";
 # Custom Styles
 --------------------------------------------------------------*/
 @import "global";
+@import "typography";
 @import "header";
+
+@import "_pages/home";
+
+@import "_modules/img-copy-card";

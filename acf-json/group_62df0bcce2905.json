@@ -32,7 +32,7 @@
             {
                 "param": "nav_menu_item",
                 "operator": "==",
-                "value": "location\/region-nav"
+                "value": "3"
             }
         ]
     ],
@@ -45,5 +45,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658785088
+    "modified": 1659811974
 }

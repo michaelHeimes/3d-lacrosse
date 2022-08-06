@@ -1,0 +1,25 @@
+.page-template-page-home {
+	
+	.home-banner {
+		background-color: $black;
+	}
+	
+	.img-copy-card {
+		position: relative;
+		padding-bottom: 5rem;
+		.bg {
+			position: absolute;
+			top: -17rem;
+			bottom: -6rem;
+			left: 0;
+			right: 0;
+			background-size: cover;
+			background-position: 100% 0%;
+		}
+		.cell {
+			position: relative;
+			z-index: 1;
+		}
+	}
+	
+}

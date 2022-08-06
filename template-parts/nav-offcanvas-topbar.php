@@ -31,7 +31,7 @@
 			</div><!-- .site-branding -->
 		
 			<ul class="menu">
-				<li class="logo mobile"><a href="<?php echo home_url(); ?>">
+				<li class="logo"><a href="<?php echo home_url(); ?>">
 					<?php 
 					$image = get_field('header_logo', 'option');
 					if( !empty( $image ) ): ?>
@@ -42,9 +42,13 @@
 						
 		</div>
 		<div class="top-bar-right show-for-tablet">
-			<div class="grid-x">
-				<?php lacrosse_3d_region_nav(); ?>	
-				<?php lacrosse_3d_top_nav(); ?>	
+			<div class="grid-x align-right">
+				<div class="cell shrink">
+					<?php lacrosse_3d_region_nav(); ?>	
+				</div>
+				<div class="cell auto">
+					<?php lacrosse_3d_top_nav(); ?>	
+				</div>
 			</div>
 		</div>
 		<div class="menu-toggle-wrap top-bar-right float-right hide-for-tablet">
