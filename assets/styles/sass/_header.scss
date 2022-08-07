@@ -37,15 +37,15 @@ header.site-header {
 			
 		}
 			
-		#region-nav,
+		.region-nav,
 		#main-nav {
 			align-items: center;
 			>li {
 				margin: 1rem .3rem 1rem;
 				
 				a {
-					font-family: $font-league;
-					color: $white;
+					font-family: $font-jockey;
+					color: $text-gray;
 					font-size: rem-calc(21);
 					text-transform: uppercase;
 					letter-spacing: 2.1px;
@@ -56,7 +56,7 @@ header.site-header {
 					}
 					
 				&:hover {
-					text-decoration: underline;
+
 				}
 					
 				}

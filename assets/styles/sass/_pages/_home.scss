@@ -10,7 +10,7 @@
 		.bg {
 			position: absolute;
 			top: -17rem;
-			bottom: -6rem;
+			bottom: 0;
 			left: 0;
 			right: 0;
 			background-size: cover;
@@ -19,6 +19,20 @@
 		.cell {
 			position: relative;
 			z-index: 1;
+		}
+	}
+	
+	.find-region {
+		.region-nav {
+			>li {
+				> a {
+					display: none;
+				}
+				>ul {
+					position: static;
+					display: block;
+				}
+			}
 		}
 	}
 	

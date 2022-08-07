@@ -247,14 +247,14 @@ img {
 textarea {
   height: auto;
   min-height: 50px;
-  border-radius: 0;
+  border-radius: 23px;
 }
 
 select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  border-radius: 0;
+  border-radius: 23px;
 }
 
 .map_canvas img,
@@ -272,7 +272,7 @@ button {
      -moz-appearance: none;
           appearance: none;
   border: 0;
-  border-radius: 0;
+  border-radius: 23px;
   background: transparent;
   line-height: 1;
   cursor: auto;
@@ -312,7 +312,7 @@ textarea {
   margin: 0 0 1rem;
   padding: 0.5rem;
   border: 1px solid #cacaca;
-  border-radius: 0;
+  border-radius: 23px;
   background-color: #fff;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -361,7 +361,7 @@ textarea[readonly] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border-radius: 0;
+  border-radius: 23px;
 }
 
 input[type=search] {
@@ -449,10 +449,10 @@ label.middle {
           align-items: stretch;
 }
 .input-group > :first-child, .input-group > :first-child.input-group-button > * {
-  border-radius: 0 0 0 0;
+  border-radius: 23px 0 0 23px;
 }
 .input-group > :last-child, .input-group > :last-child.input-group-button > * {
-  border-radius: 0 0 0 0;
+  border-radius: 0 23px 23px 0;
 }
 
 .input-group-button a,
@@ -549,7 +549,7 @@ select {
      -moz-appearance: none;
           appearance: none;
   border: 1px solid #cacaca;
-  border-radius: 0;
+  border-radius: 23px;
   background-color: #fff;
   font-family: inherit;
   font-size: 1rem;
@@ -688,7 +688,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "VTF League W05 Bold";
+  font-family: "Jockey One", sans-serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -752,19 +752,19 @@ h6, .h6 {
   }
 
   h2, .h2 {
-    font-size: 2.5rem;
+    font-size: 2.875rem;
   }
 
   h3, .h3 {
-    font-size: 1.9375rem;
+    font-size: 1.875rem;
   }
 
   h4, .h4 {
-    font-size: 1.5625rem;
+    font-size: 1.25rem;
   }
 
   h5, .h5 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   h6, .h6 {
@@ -773,12 +773,12 @@ h6, .h6 {
 }
 a {
   line-height: inherit;
-  color: #1779ba;
+  color: #019FDB;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, a:focus {
-  color: #1468a0;
+  color: #0189bc;
 }
 a img {
   border: 0;
@@ -855,6 +855,7 @@ kbd {
   background-color: #e6e6e6;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   color: #000;
+  border-radius: 23px;
 }
 
 .subheader {
@@ -4117,7 +4118,7 @@ h3 {
   margin: 0 0 1rem 0;
   padding: 0.85em 1em;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 23px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-family: inherit;
@@ -4146,20 +4147,20 @@ h3 {
   margin-left: 0;
 }
 .button, .button.disabled, .button[disabled], .button.disabled:hover, .button[disabled]:hover, .button.disabled:focus, .button[disabled]:focus {
-  background-color: #1779ba;
+  background-color: #019FDB;
   color: #fff;
 }
 .button:hover, .button:focus {
-  background-color: #14679e;
+  background-color: #0187ba;
   color: #fff;
 }
 .button.primary, .button.primary.disabled, .button.primary[disabled], .button.primary.disabled:hover, .button.primary[disabled]:hover, .button.primary.disabled:focus, .button.primary[disabled]:focus {
-  background-color: #1779ba;
-  color: #fff;
+  background-color: #019FDB;
+  color: #000;
 }
 .button.primary:hover, .button.primary:focus {
-  background-color: #126195;
-  color: #fff;
+  background-color: #017faf;
+  color: #000;
 }
 .button.secondary, .button.secondary.disabled, .button.secondary[disabled], .button.secondary.disabled:hover, .button.secondary[disabled]:hover, .button.secondary.disabled:focus, .button.secondary[disabled]:focus {
   background-color: #767676;
@@ -4197,20 +4198,20 @@ h3 {
   background-color: transparent;
 }
 .button.hollow, .button.hollow.disabled, .button.hollow[disabled], .button.hollow.disabled:hover, .button.hollow[disabled]:hover, .button.hollow.disabled:focus, .button.hollow[disabled]:focus {
-  border: 1px solid #1779ba;
-  color: #1779ba;
+  border: 1px solid #019FDB;
+  color: #019FDB;
 }
 .button.hollow:hover, .button.hollow:focus {
-  border-color: #0c3d5d;
-  color: #0c3d5d;
+  border-color: #01506e;
+  color: #01506e;
 }
 .button.hollow.primary, .button.hollow.primary.disabled, .button.hollow.primary[disabled], .button.hollow.primary.disabled:hover, .button.hollow.primary[disabled]:hover, .button.hollow.primary.disabled:focus, .button.hollow.primary[disabled]:focus {
-  border: 1px solid #1779ba;
-  color: #1779ba;
+  border: 1px solid #019FDB;
+  color: #019FDB;
 }
 .button.hollow.primary:hover, .button.hollow.primary:focus {
-  border-color: #0c3d5d;
-  color: #0c3d5d;
+  border-color: #01506e;
+  color: #01506e;
 }
 .button.hollow.secondary, .button.hollow.secondary.disabled, .button.hollow.secondary[disabled], .button.hollow.secondary.disabled:hover, .button.hollow.secondary[disabled]:hover, .button.hollow.secondary.disabled:focus, .button.hollow.secondary[disabled]:focus {
   border: 1px solid #767676;
@@ -4249,16 +4250,16 @@ h3 {
   background-color: transparent;
 }
 .button.clear, .button.clear.disabled, .button.clear[disabled], .button.clear.disabled:hover, .button.clear[disabled]:hover, .button.clear.disabled:focus, .button.clear[disabled]:focus {
-  color: #1779ba;
+  color: #019FDB;
 }
 .button.clear:hover, .button.clear:focus {
-  color: #0c3d5d;
+  color: #01506e;
 }
 .button.clear.primary, .button.clear.primary.disabled, .button.clear.primary[disabled], .button.clear.primary.disabled:hover, .button.clear.primary[disabled]:hover, .button.clear.primary.disabled:focus, .button.clear.primary[disabled]:focus {
-  color: #1779ba;
+  color: #019FDB;
 }
 .button.clear.primary:hover, .button.clear.primary:focus {
-  color: #0c3d5d;
+  color: #01506e;
 }
 .button.clear.secondary, .button.clear.secondary.disabled, .button.clear.secondary[disabled], .button.clear.secondary.disabled:hover, .button.clear.secondary[disabled]:hover, .button.clear.secondary.disabled:focus, .button.clear.secondary[disabled]:focus {
   color: #767676;
@@ -4304,10 +4305,10 @@ h3 {
   margin-left: 1em;
 }
 .button.dropdown.hollow::after, .button.dropdown.clear::after {
-  border-top-color: #1779ba;
+  border-top-color: #019FDB;
 }
 .button.dropdown.hollow.primary::after, .button.dropdown.clear.primary::after {
-  border-top-color: #1779ba;
+  border-top-color: #019FDB;
 }
 .button.dropdown.hollow.secondary::after, .button.dropdown.clear.secondary::after {
   border-top-color: #767676;
@@ -4339,7 +4340,7 @@ a.button:hover, a.button:focus {
   padding: 1rem;
   visibility: hidden;
   border: 1px solid #cacaca;
-  border-radius: 0;
+  border-radius: 23px;
   background-color: #fff;
   font-size: 1rem;
 }
@@ -4625,12 +4626,12 @@ a.button:hover, a.button:focus {
   text-align: center;
 }
 .menu .is-active > a {
-  background: #1779ba;
-  color: #fff;
+  background: #019FDB;
+  color: #000;
 }
 .menu .active > a {
-  background: #1779ba;
-  color: #fff;
+  background: #019FDB;
+  color: #000;
 }
 .menu.align-left {
   -webkit-box-pack: start;
@@ -4739,7 +4740,7 @@ a.button:hover, a.button:focus {
   border-width: 6px;
   content: "";
   border-bottom-width: 0;
-  border-color: #1779ba transparent transparent;
+  border-color: #019FDB transparent transparent;
   position: absolute;
   top: 50%;
   margin-top: -3px;
@@ -4784,7 +4785,7 @@ a.button:hover, a.button:focus {
   border-width: 6px;
   content: "";
   border-bottom-width: 0;
-  border-color: #1779ba transparent transparent;
+  border-color: #019FDB transparent transparent;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -4826,7 +4827,7 @@ a.button:hover, a.button:focus {
 }
 .dropdown.menu > li.is-active > a {
   background: transparent;
-  color: #1779ba;
+  color: #019FDB;
 }
 .no-js .dropdown.menu ul {
   display: none;
@@ -7253,13 +7254,28 @@ BACKGROUND COLORS
 .black-bg .h1,
 .black-bg h2,
 .black-bg .h2,
-.black-bg h3,
-.black-bg .h3,
-.black-bg h4,
-.black-bg .h4,
 .black-bg p,
 .black-bg .p {
   color: #fff;
+}
+.black-bg h3,
+.black-bg .h3,
+.black-bg h4,
+.black-bg .h4 {
+  color: #019FDB;
+}
+
+/*********************
+RE-USED ELEMENTS
+*********************/
+button,
+.button {
+  font-family: "Jockey One", sans-serif;
+  color: #000;
+}
+button a,
+.button a {
+  color: #000;
 }
 
 /*********************
@@ -7308,7 +7324,8 @@ POSTS & CONTENT STYLES
   background: #eee;
   padding: 5px;
 }
-.wp-caption img {
+.wp-caption img,
+.wp-caption svg {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
@@ -7325,7 +7342,7 @@ POSTS & CONTENT STYLES
   margin: 0 0 1rem 0;
   padding: 0.85em 1em;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 23px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-family: inherit;
@@ -7339,11 +7356,11 @@ POSTS & CONTENT STYLES
   outline: 0;
 }
 .post-password-form input[type=submit], .post-password-form input[type=submit].disabled, .post-password-form input[type=submit][disabled], .post-password-form input[type=submit].disabled:hover, .post-password-form input[type=submit][disabled]:hover, .post-password-form input[type=submit].disabled:focus, .post-password-form input[type=submit][disabled]:focus {
-  background-color: #1779ba;
+  background-color: #019FDB;
   color: #fff;
 }
 .post-password-form input[type=submit]:hover, .post-password-form input[type=submit]:focus {
-  background-color: #14679e;
+  background-color: #0187ba;
   color: #fff;
 }
 
@@ -7727,11 +7744,37 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   left: -9000px;
 }
 
+button,
+.button,
 h1,
 .h1,
 h2,
 .h2 {
   text-transform: uppercase;
+}
+
+h3,
+.h3 {
+  font-weight: bold;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  color: #019FDB;
+}
+
+.color-white h1,
+.color-white .h1,
+.color-white h2,
+.color-white .h2,
+.color-white p,
+.color-white .p ul {
+  color: #fff;
+}
+.color-white h1.color-white,
+.color-white .h1.color-white,
+.color-white h2.color-white,
+.color-white .h2.color-white,
+.color-white p.color-white,
+.color-white .p ul.color-white {
+  color: #fff;
 }
 
 header.site-header {
@@ -7768,34 +7811,30 @@ header.site-header #top-bar-menu li.logo.desktop a {
   position: relative;
   top: -20px;
 }
-header.site-header #top-bar-menu #region-nav,
+header.site-header #top-bar-menu .region-nav,
 header.site-header #top-bar-menu #main-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-header.site-header #top-bar-menu #region-nav > li,
+header.site-header #top-bar-menu .region-nav > li,
 header.site-header #top-bar-menu #main-nav > li {
   margin: 1rem 0.3rem 1rem;
 }
-header.site-header #top-bar-menu #region-nav > li a,
+header.site-header #top-bar-menu .region-nav > li a,
 header.site-header #top-bar-menu #main-nav > li a {
-  font-family: "VTF League W05 Bold";
-  color: #fff;
+  font-family: "Jockey One", sans-serif;
+  color: #939393;
   font-size: 1.3125rem;
   text-transform: uppercase;
   letter-spacing: 2.1px;
 }
 @media print, screen and (min-width: 64em) {
-  header.site-header #top-bar-menu #region-nav > li a,
+  header.site-header #top-bar-menu .region-nav > li a,
 header.site-header #top-bar-menu #main-nav > li a {
     font-size: 0.875rem;
     letter-spacing: 1.4px;
   }
-}
-header.site-header #top-bar-menu #region-nav > li a:hover,
-header.site-header #top-bar-menu #main-nav > li a:hover {
-  text-decoration: underline;
 }
 header.site-header #top-bar-menu .menu-toggle-wrap {
   width: auto;
@@ -7837,7 +7876,7 @@ header.site-header #top-bar-menu .menu-toggle-wrap a#menu-toggle span:nth-child(
 .page-template-page-home .img-copy-card .bg {
   position: absolute;
   top: -17rem;
-  bottom: -6rem;
+  bottom: 0;
   left: 0;
   right: 0;
   background-size: cover;
@@ -7846,4 +7885,18 @@ header.site-header #top-bar-menu .menu-toggle-wrap a#menu-toggle span:nth-child(
 .page-template-page-home .img-copy-card .cell {
   position: relative;
   z-index: 1;
+}
+.page-template-page-home .find-region .region-nav > li > a {
+  display: none;
+}
+.page-template-page-home .find-region .region-nav > li > ul {
+  position: static;
+  display: block;
+}
+
+.img-copy-card .quote-mark {
+  font-family: "Jockey One", sans-serif;
+  color: #019FDB;
+  font-size: 12.5rem;
+  line-height: 1;
 }

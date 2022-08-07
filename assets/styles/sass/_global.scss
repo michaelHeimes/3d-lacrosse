@@ -12,13 +12,27 @@ BACKGROUND COLORS
 	.h1,
 	h2,
 	.h2,
-	h3,
-	.h3,
-	h4,
-	.h4,
 	p,
 	.p {
 		color: $white;
+	}
+	h3,
+	.h3,
+	h4,
+	.h4 {
+		color: $brand-blue;
+	}
+}
+
+/*********************
+RE-USED ELEMENTS
+*********************/
+button,
+.button {
+	font-family: $font-jockey;
+	color: $black;
+	a {
+		color: $black;
 	}
 }
 
@@ -84,7 +98,8 @@ POSTS & CONTENT STYLES
 	padding: 5px;
 
 	// Images inside wp-caption  
-	img {
+	img,
+	svg {
 		max-width: 100%;
 		margin-bottom: 0;
 		width: 100%;
