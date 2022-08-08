@@ -1,0 +1,29 @@
+.team-card,
+.team-reveal {
+	
+	.img-wrap {
+		width: 147px;
+		height: 147px;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.16);
+		
+		img {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		
+	}
+	
+}
+
+.team-reveal {
+	.photo-title {
+		padding: 54px 53px 46px;
+	}
+	.text-wrap {
+		padding: 0 53px 66px;
+	}
+}

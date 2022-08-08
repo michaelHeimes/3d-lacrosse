@@ -6,7 +6,7 @@ register_nav_menus(
 		'region-nav'		=> __( 'The Region Menu', 'lacrosse-3d' ),		// Utility nav in header
 		'offcanvas-nav'	=> __( 'The Off-Canvas Menu', 'lacrosse-3d' ),	// Off-Canvas nav
 		'footer-links'	=> __( 'Footer Links', 'lacrosse-3d' ),		// Secondary nav in footer
-		'social-links'	=> __( 'Social Links', 'lacrosse-3d' ),		// Secondary nav in footer		
+		'social-links'	=> __( 'Social Links', 'lacrosse-3d' ),		// Secondary nav in footer	
 	)
 );
 
@@ -21,7 +21,9 @@ function lacrosse_3d_top_nav() {
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
-		'walker'			=> new Topbar_Menu_Walker()
+		'walker'			=> new Topbar_Menu_Walker(),
+		'link_before'    => '<span>',
+		'link_after'     => '</span>'	
 	));
 }
 
@@ -35,7 +37,9 @@ function lacrosse_3d_region_nav() {
 		'theme_location'	=> 'region-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
-		'walker'			=> new Topbar_Menu_Walker()
+		'walker'			=> new Topbar_Menu_Walker(),
+		'link_before'    => '<span>',
+		'link_after'     => '</span>'	
 	));
 }
 

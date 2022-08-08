@@ -76,7 +76,7 @@ $foundation-palette: (
   "alert": #cc4b37,
 );
 $light-gray: #e6e6e6;
-$medium-gray: #cacaca;
+$medium-gray: #AAAAAA;
 $dark-gray: #8a8a8a;
 $black: #000;
 $white: #fff;
@@ -122,7 +122,7 @@ $breakpoints-hidpi: (
   "hidpi-3": 3
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium tablet large);
+$breakpoint-classes: (small medium tablet large xlarge);
 
 // 3. The Grid
 // -----------
@@ -153,16 +153,16 @@ $header-styles: (
 	'h2': ('font-size': 20),
 	'h3': ('font-size': 19),
 	'h4': ('font-size': 18),
-	'h5': ('font-size': 17),
-	'h6': ('font-size': 16),
+	'h5': ('font-size': 16),
+	'h6': ('font-size': 12),
   ),
   "medium": (
 	'h1': ('font-size': 48),
 	'h2': ('font-size': 46),
 	'h3': ('font-size': 30),
 	'h4': ('font-size': 20),
-	'h5': ('font-size': 18),
-	'h6': ('font-size': 16),
+	'h5': ('font-size': 16),
+	'h6': ('font-size': 12),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -301,7 +301,7 @@ $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
+$button-color: $black;
 $button-color-alt: $black;
 $button-radius: $global-radius;
 $button-border: 1px solid transparent;
@@ -396,10 +396,10 @@ $drilldown-arrow-size: 6px;
 // ------------
 
 $dropdown-padding: 1rem;
-$dropdown-background: $body-background;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-background: transparent;
+$dropdown-border: 0px solid $medium-gray;
 $dropdown-font-size: 1rem;
-$dropdown-width: 300px;
+$dropdown-width: 100%;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
   "tiny": 100px,
@@ -414,14 +414,14 @@ $dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
-$dropdownmenu-min-width: 200px;
+$dropdownmenu-min-width: null;
 $dropdownmenu-background: null;
 $dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
-$dropdown-menu-item-color-active: get-color(primary);
+$dropdownmenu-border: 0px solid $medium-gray;
+$dropdown-menu-item-color-active: transparent;
 $dropdown-menu-item-background-active: transparent;
 
 // 19. Flexbox Utilities
@@ -499,7 +499,7 @@ $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
 $menu-item-color-alt-active: $black;
-$menu-item-background-active: get-color(primary);
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
@@ -755,11 +755,11 @@ $responsive-embed-ratios: (
 // ----------
 
 $reveal-background: $white;
-$reveal-width: 600px;
+$reveal-width: 720px;
 $reveal-max-width: $global-width;
-$reveal-padding: $global-padding;
-$reveal-border: 1px solid $medium-gray;
-$reveal-radius: $global-radius;
+$reveal-padding: 0;
+$reveal-border: 2px solid $medium-gray;
+$reveal-radius: 0;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);
 

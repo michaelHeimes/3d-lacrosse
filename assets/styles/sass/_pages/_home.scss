@@ -4,9 +4,8 @@
 		background-color: $black;
 	}
 	
-	.img-copy-card {
+	.hero-bottom {
 		position: relative;
-		padding-bottom: 5rem;
 		.bg {
 			position: absolute;
 			top: -17rem;
@@ -16,10 +15,11 @@
 			background-size: cover;
 			background-position: 100% 0%;
 		}
-		.cell {
-			position: relative;
-			z-index: 1;
-		}
+	}
+	
+	.img-copy-card {
+		position: relative;
+		padding-bottom: 5rem;
 	}
 	
 	.find-region {

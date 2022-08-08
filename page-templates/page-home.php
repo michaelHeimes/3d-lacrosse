@@ -11,7 +11,7 @@ get_header();
 $fields = get_fields();
 ?>
 	<div class="content">
-		<div class="inner-content grid-x grid-padding-x">
+		<div class="inner-content">
 
 			<main id="primary" class="site-main">
 		
@@ -27,46 +27,11 @@ $fields = get_fields();
 				
 					<div class="entry-content">
 						
-						<section class="img-copy-card type-text-btn img-right">
+						<div class="hero-bottom">
 							<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/home-hero-bg.svg);"></div>
-							<div class="grid-container">
-								<div class="grid-x grid-padding-x tablet-flex-dir-row-reverse align-top">
-									<?php 
-										$hero_image_copy_card = $fields['hero_image_&_copy_card'];
-										if( !empty($hero_image_copy_card) ):	
-									?>
-									<div class="left cell small-12 tablet-6">
-										<?php 
-											if( !empty($hero_image_copy_card['image']) ):
-											$image = $hero_image_copy_card['image'];
-										?>
-										<div class="img-wrap">
-											<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-										</div>
-										<?php endif;?>
-									</div>
-									<div class="right black-bg cell small-12 tablet-6">
-										<?php if( !empty($hero_image_copy_card['text']) ):?>
-										<div class="text-wrap black-bg">
-											<?php echo $hero_image_copy_card['text'];?>
-										</div>
-										<?php endif;?>
-										<?php 
-											if( $hero_image_copy_card['button_link'] ):
-												$btn_link = $hero_image_copy_card['button_link'];
-												$link_url = $btn_link['url'];
-												$link_title = $btn_link['title'];
-												$link_target = $btn_link['target'] ? $btn_link['target'] : '_self';
-										?>
-										<div class="btn-wrap">
-											<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-										</div>
-										<?php endif;?>
-									</div>									
-									<?php endif;?>
-								</div>
-							</div>
-						</section>
+							<?php get_template_part('template-parts/modules/part-image-copy-card');?>
+						</div>
+						
 						
 						<section class="find-region text-center">
 							<div class="grid-container">

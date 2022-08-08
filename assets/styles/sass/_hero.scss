@@ -1,0 +1,20 @@
+body:not(.home) {
+	.banner {
+	position: relative;
+		.bg {
+			position: absolute;
+			top: -17rem;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-size: cover;
+			background-position: 100% 0%;
+		}
+	}
+	.hero-bottom {
+
+		.cell {
+			position: relative;
+		}
+	}
+}

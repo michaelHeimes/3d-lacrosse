@@ -1,286 +1,11 @@
 {
-    "key": "group_62df310726ad6",
-    "title": "Home Page",
+    "key": "group_62ef97391f666",
+    "title": "Cloned Modules",
     "fields": [
         {
-            "key": "field_62df315268549",
-            "label": "Hero",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 1,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_62df31676854a",
-            "label": "Background Image",
-            "name": "hero_background_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_62df318c6854b",
-            "label": "Heading",
-            "name": "hero_heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62df31c86854c",
+            "key": "field_62ef97392e9f0",
             "label": "Image & Copy Card",
-            "name": "cloned_hero_image_&_copy_card",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_62ef97392e9f0"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_62df366a63179",
-            "label": "Region Finder",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_62df36726317a",
-            "label": "Heading",
-            "name": "rf_heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62df367b6317b",
-            "label": "Map Image",
-            "name": "rf_map_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_62df36846317c",
-            "label": "Copy Cards",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_62eef285b641f",
-            "label": "Section Background Image",
-            "name": "section_background_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_62df368d6317d",
-            "label": "Cards",
-            "name": "cc_cards",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Add Card",
-            "sub_fields": [
-                {
-                    "key": "field_62df36966317e",
-                    "label": "Copy",
-                    "name": "copy",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
-                }
-            ]
-        },
-        {
-            "key": "field_62df369d6317f",
-            "label": "Copy Block",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_62df36a963180",
-            "label": "Copy",
-            "name": "cb_copy",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_62df36beefb5a",
-            "label": "Quote",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_62df36b4efb50",
-            "label": "Quote",
-            "name": "quote",
+            "name": "image_copy_card",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -293,7 +18,29 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_62df36b4efb53",
+                    "key": "field_62ef9c5476ff3",
+                    "label": "Layout (desktop)",
+                    "name": "layout",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "image-left": "Image Left",
+                        "image-right": "Image Right"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_62ef97393d77f",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -317,7 +64,256 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_62df36b4efb58",
+                    "key": "field_62ef97393d78a",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_62ef989695263",
+                    "label": "Buttons",
+                    "name": "buttons",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Button",
+                    "sub_fields": [
+                        {
+                            "key": "field_62ef98a895264",
+                            "label": "Add Right Chevron",
+                            "name": "add_right_chevron",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_62ef97393d792",
+                            "label": "Button Link",
+                            "name": "button_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_62ef97392ea12",
+            "label": "Copy Cards",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62ef97392ea1a",
+            "label": "Section Background Image",
+            "name": "section_background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_62ef97392ea23",
+            "label": "Cards",
+            "name": "cc_cards",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Card",
+            "sub_fields": [
+                {
+                    "key": "field_62ef97395116a",
+                    "label": "Copy",
+                    "name": "copy",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_62ef97392ea2c",
+            "label": "Copy Block",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62ef97392ea34",
+            "label": "Copy",
+            "name": "cb_copy",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_62ef97392ea3c",
+            "label": "Quote",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62ef97392ea45",
+            "label": "Quote",
+            "name": "quote",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_62ef97395cf9e",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "34",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_62ef97395cfb7",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -336,7 +332,7 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_62df36b4efb59",
+                    "key": "field_62ef97395cfbd",
                     "label": "Citation",
                     "name": "citation",
                     "type": "text",
@@ -345,7 +341,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_62df31676854a",
+                                "field": "field_62ef97392e9e0",
                                 "operator": "!=empty"
                             }
                         ]
@@ -364,7 +360,7 @@
             ]
         },
         {
-            "key": "field_62df3767efb5b",
+            "key": "field_62ef97392ea4d",
             "label": "Pros",
             "name": "",
             "type": "accordion",
@@ -381,7 +377,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_62df376eefb5c",
+            "key": "field_62ef97392ea55",
             "label": "Heading",
             "name": "pros_heading",
             "type": "text",
@@ -400,7 +396,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_62df377befb5d",
+            "key": "field_62ef97392ea5d",
             "label": "Text",
             "name": "pros_text",
             "type": "textarea",
@@ -419,7 +415,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_62df3785efb5e",
+            "key": "field_62ef97392ea66",
             "label": "Pros Slider",
             "name": "pros_slider",
             "type": "repeater",
@@ -438,7 +434,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_62df3794efb5f",
+                    "key": "field_62ef97396b28f",
                     "label": "Photo",
                     "name": "photo",
                     "type": "image",
@@ -462,7 +458,7 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_62df379befb60",
+                    "key": "field_62ef97396b299",
                     "label": "Name",
                     "name": "name",
                     "type": "text",
@@ -481,7 +477,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_62df37a2efb61",
+                    "key": "field_62ef97396b2a0",
                     "label": "Team \/ Position",
                     "name": "team_position",
                     "type": "text",
@@ -500,7 +496,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_62df37c2efb62",
+                    "key": "field_62ef97396b2a8",
                     "label": "Region",
                     "name": "region",
                     "type": "text",
@@ -524,9 +520,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "page-templates\/page-home.php"
+                "value": "page"
             }
         ]
     ],
@@ -538,8 +534,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1659870519
+    "modified": 1659874413
 }

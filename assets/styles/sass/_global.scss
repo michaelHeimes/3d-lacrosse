@@ -29,11 +29,29 @@ RE-USED ELEMENTS
 *********************/
 button,
 .button {
+	cursor: pointer;
 	font-family: $font-jockey;
 	color: $black;
 	a {
 		color: $black;
 	}
+}
+
+.relative {
+	position: relative;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.circle {
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.reveal.team-reveal {
+	box-shadow: 6px 0px 20px 0px rgba(0,0,0,0.16);
 }
 
 /*********************
