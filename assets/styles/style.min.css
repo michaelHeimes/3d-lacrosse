@@ -339,7 +339,7 @@ textarea {
 [type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid #8a8a8a;
+  border: 1px solid #656565;
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px #AAAAAA;
           box-shadow: 0 0 5px #AAAAAA;
@@ -563,7 +563,7 @@ select {
   font-weight: normal;
   line-height: 1.5;
   color: #000;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%28138, 138, 138%29"></polygon></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%28101, 101, 101%29"></polygon></svg>');
   background-origin: content-box;
   background-position: right -1rem center;
   background-repeat: no-repeat;
@@ -581,7 +581,7 @@ select {
 }
 select:focus {
   outline: none;
-  border: 1px solid #8a8a8a;
+  border: 1px solid #656565;
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px #AAAAAA;
           box-shadow: 0 0 5px #AAAAAA;
@@ -843,7 +843,7 @@ blockquote {
 }
 blockquote, blockquote p {
   line-height: 1.6;
-  color: #8a8a8a;
+  color: #656565;
 }
 
 abbr, abbr[title] {
@@ -870,7 +870,7 @@ kbd {
   margin-bottom: 0.5rem;
   font-weight: normal;
   line-height: 1.4;
-  color: #8a8a8a;
+  color: #656565;
 }
 
 .lead {
@@ -893,7 +893,7 @@ ul.no-bullet, ol.no-bullet {
 
 .cite-block, cite {
   display: block;
-  color: #8a8a8a;
+  color: #656565;
   font-size: 0.8125rem;
 }
 .cite-block:before, cite:before {
@@ -1077,7 +1077,7 @@ a[href^="#"]:after {
 
   pre,
 blockquote {
-    border: 1px solid #8a8a8a;
+    border: 1px solid #656565;
     page-break-inside: avoid;
   }
 
@@ -5220,6 +5220,105 @@ a.button:hover, a.button:focus {
   text-decoration: none;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 23px;
+}
+thead,
+tbody,
+tfoot {
+  border: 1px solid #656565;
+  background-color: #fff;
+}
+
+caption {
+  padding: 0.5rem 0.625rem 0.625rem;
+  font-weight: bold;
+}
+
+thead {
+  background: #fff;
+  color: #656565;
+}
+
+tfoot {
+  background: #fff;
+  color: #656565;
+}
+
+thead tr,
+tfoot tr {
+  background: transparent;
+}
+thead th,
+thead td,
+tfoot th,
+tfoot td {
+  padding: 0.5rem 0.625rem 0.625rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+tbody th,
+tbody td {
+  padding: 0.5rem 0.625rem 0.625rem;
+}
+
+tbody tr:nth-child(even) {
+  border-bottom: 0;
+  background-color: #fff;
+}
+
+table.unstriped tbody {
+  background-color: #fff;
+}
+table.unstriped tbody tr {
+  border-bottom: 1px solid #656565;
+  background-color: #fff;
+}
+
+@media print, screen and (max-width: 56.24875em) {
+  table.stack thead {
+    display: none;
+  }
+  table.stack tfoot {
+    display: none;
+  }
+  table.stack tr,
+table.stack th,
+table.stack td {
+    display: block;
+  }
+  table.stack td {
+    border-top: 0;
+  }
+}
+
+table.scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+table.hover thead tr:hover {
+  background-color: #fff;
+}
+table.hover tfoot tr:hover {
+  background-color: #fff;
+}
+table.hover tbody tr:hover {
+  background-color: #fff;
+}
+table.hover:not(.unstriped) tr:nth-of-type(even):hover {
+  background-color: #fff;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
 .dropdown-pane {
   position: absolute;
   z-index: 10;
@@ -8591,6 +8690,33 @@ button a,
 .reveal.team-reveal {
   -webkit-box-shadow: 6px 0px 20px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 6px 0px 20px 0px rgba(0, 0, 0, 0.16);
+}
+
+.table-wrap {
+  border: 1px solid #656565;
+  padding: 39px 55px;
+}
+.table-wrap .tablepress tfoot th, .table-wrap .tablepress thead th {
+  background-color: #fff;
+  vertical-align: middle;
+}
+.table-wrap thead,
+.table-wrap tbody,
+.table-wrap tfoot {
+  border-left: 0;
+  border-right: 0;
+  color: #656565;
+}
+.table-wrap thead,
+.table-wrap tbody {
+  border-top: 0;
+}
+.table-wrap thead th {
+  font-weight: 400;
+}
+.table-wrap tbody td {
+  padding: 2.6rem 1.3rem 1.35rem;
+  border-bottom: 1px solid #656565;
 }
 
 /*********************

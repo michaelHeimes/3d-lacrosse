@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Boys / Girls Page
+ * Template name: Roster Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -47,7 +47,15 @@ $fields = get_fields();
 											</div>	
 										</div>
 										<?php endforeach; endif;?>
-									</div>								
+									</div>		
+									
+									<div class="cell right small-12 tablet-9">
+										<div class="table-wrap">
+											<?php $shortcode = get_post_meta($post->ID,'roster_shortcode',true);
+											echo do_shortcode($shortcode);?>
+										</div>
+									</div>
+
 								</div>
 							</div>
 						</section>

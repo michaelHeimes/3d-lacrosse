@@ -31,7 +31,7 @@ $image = get_field('logo');
 							
 							<h1><?php echo $region_title ;?></h1>
 							
-							<?php get_template_part('template-parts/part-child-links');?>
+							<?php get_template_part('template-parts/region-page-nav');?>
 						</div>
 						
 					</header><!-- .entry-header -->

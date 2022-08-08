@@ -54,6 +54,38 @@ button,
 	box-shadow: 6px 0px 20px 0px rgba(0,0,0,0.16);
 }
 
+.table-wrap {
+	border: 1px solid $dark-gray;
+	padding: 39px 55px;
+	
+	.tablepress tfoot th, .tablepress thead th {
+		background-color: $white;
+		vertical-align: middle;
+	}
+
+	thead,
+	tbody, 
+	tfoot {
+		border-left: 0;
+		border-right: 0;
+		color: $dark-gray;
+	}
+	
+	thead,
+	tbody {
+		border-top: 0;
+	}
+	
+	thead th {
+		font-weight: 400;
+	}
+	
+	tbody td {
+		padding: 2.6rem 1.3rem 1.35rem;
+		border-bottom: 1px solid $dark-gray;
+	}
+
+}
 /*********************
 POSTS & CONTENT STYLES
 *********************/

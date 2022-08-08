@@ -11,7 +11,7 @@
 		
 		<h1><?php echo the_title();?></h1>
 		
-		<?php get_template_part('template-parts/part-sibling-links');?>
+		<?php get_template_part('template-parts/region-page-nav');?>
 	</div>
 	
 </header><!-- .entry-header -->

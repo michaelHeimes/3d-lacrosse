@@ -160,7 +160,7 @@ function lacrosse_3d_scripts() {
 	wp_enqueue_style( 'lacrosse-3d-style-min', get_template_directory_uri() . '/assets/styles/style.min.css', array(), _S_VERSION );
 	
 	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/scripts/app.min.js', array('jquery'), _S_VERSION, true );
-
+	
 	//wp_enqueue_script( 'lacrosse-3d-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -168,6 +168,10 @@ function lacrosse_3d_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'lacrosse_3d_scripts' );
+
+
+// Disable Tabelpress Stylesheet
+add_filter( 'tablepress_use_default_css', '__return_false' );
 
 
 /**
@@ -246,3 +250,5 @@ require_once(get_template_directory().'/inc/disable-gutenberg.php');
 // Customize the WordPress admin
 require_once(get_template_directory().'/inc/admin.php'); 
 
+// Sitemap Removal
+require_once(get_template_directory().'/inc/sitemap-removal.php'); 

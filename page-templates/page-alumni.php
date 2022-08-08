@@ -27,9 +27,13 @@ $card_rows = $fields['card_rows'];
 						</div>
 							
 						<?php if( !empty($card_rows) ):?>
-						<section class="card-rows">
+						<section class="card-rows alumni">
 							<div class="grid-container">
-								
+								<div class="grid-x grid-padding-x">
+									<div class="cell small-12">
+										<h2>Alumni</h2>
+									</div>
+								</div>
 								<?php 
 								foreach($card_rows as $card_row):
 									$row = $card_row['row'];
@@ -39,7 +43,7 @@ $card_rows = $fields['card_rows'];
 								?>
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12">
-										<h2><?php echo $row_heading;?></h2>
+										<h3><?php echo $row_heading;?></h3>
 									</div>
 								</div>
 								<?php endif;?>
@@ -48,39 +52,21 @@ $card_rows = $fields['card_rows'];
 								<div class="row-cards grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3">
 									<?php foreach($row_cards as $row_card):?>
 										<div class="cell">
-											<div class="inner">
+											<div class="inner grid-x grid-padding-x">
 												<?php 
 												$image = $row_card['image'];
 												if( !empty( $image ) ): ?>
-												<div class="image-wrap relative">
-													<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-													<p class="callout h5 uppercase"><?php echo $row_card['callout'];?></p>
+												<div class="left image-wrap cell shrink">
+													<div class="circle">
+														<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="129px"/>
+													</div>
+													<?php get_template_part('template-parts/icons-svgs/three-stripes');?>
 												</div>
 												<?php endif; ?>
-												<div class="bottom grid-x grid-padding-x">
-													<div class="left cell small-12 medium-auto">
-														<h3 class="h4"><?php echo $row_card['title'];?></h3>
-														<p class="h6"><?php echo $row_card['date_&_age_group'];?></p>
-														<p class="h7"><i><?php echo $row_card['location'];?></i></p>
-													</div>
-													<?php 
-													$link = $row_card['button_link'];
-													if( $link ): 
-														$link_url = $link['url'];
-														$link_title = $link['title'];
-														$link_target = $link['target'] ? $link['target'] : '_self';
-														?>
-													<div class="cell small-12 medium-shrink">
-														<div class="btn-wrap">
-															<a class="button<?php if($add_chev == 'true'):?> chev-link grid-x align-middle<?php endif;?>" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-																<span><?php echo esc_html( $link_title ); ?></span>
-																<svg xmlns="http://www.w3.org/2000/svg" width="9.254" height="15.679" viewBox="0 0 9.254 15.679">
-																	<path id="Path_773" data-name="Path 773" d="M267.723,1265.463l7.132,7.132-7.132,7.132" transform="translate(-267.016 -1264.756)" fill="none" stroke="#000" stroke-width="2"/>
-																</svg>
-															</a>
-														</div>
-													</div>
-													<?php endif; ?>
+												<div class="right cell small-12 medium-auto">
+													<h3 class="h4"><?php echo $row_card['name'];?></h3>
+													<p><?php echo $row_card['team'];?></p>
+													<p><?php echo $row_card['region'];?></p>
 												</div>
 											</div>
 										</div>
@@ -92,7 +78,44 @@ $card_rows = $fields['card_rows'];
 							</div>
 						</section>
 						<?php endif;?>
-					
+						
+						<?php if( $past_alumni = $fields['past_alumni']):?>
+						<section class="past-alumni">
+							<div class="grid-container">
+								<div class="grid-x grid-padding-x">
+									<div class="cell small-12">
+										<h2>Past Alumni</h2>
+										
+										<div class="table-wrap">
+											<table>
+												<thead>
+													<tr>
+														<th>YEAR</th>
+														<th>PLAYER</th>
+														<th>SCHOOL</th>
+														<th>DIVISION</th>
+														<th>3d REGION</th>
+													</tr>
+												</thead>
+												<tbody>
+													<?php foreach ($past_alumni as $past_alum):?>
+													<tr>
+														<td><?php echo $past_alum['year'];?></td>
+														<td><?php echo $past_alum['player_name'];?></td>
+														<td><?php echo $past_alum['school'];?></td>
+														<td><?php echo $past_alum['division'];?></td>
+														<td><?php echo $past_alum['3d_region'];?></td>
+													</tr>
+													<?php endforeach;?>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</section>
+						<?php endif;?>
 					
 					</div><!-- .entry-content -->
 				

@@ -1,12 +1,12 @@
 {
     "key": "group_62f0547f89a58",
-    "title": "Boys \/ Girls Template",
+    "title": "Roster Template",
     "fields": [
         {
-            "key": "field_62f054a4af7f6",
-            "label": "Year and Gender",
-            "name": "year_and_gender",
-            "type": "text",
+            "key": "field_62f14794ab36f",
+            "label": "Coaches",
+            "name": "",
+            "type": "accordion",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
         },
         {
             "key": "field_62f054caaf7f7",
@@ -103,6 +101,42 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_62f1479cab370",
+            "label": "Roster",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62f15ffbfe61b",
+            "label": "Roster Shortcode",
+            "name": "roster_shortcode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -110,7 +144,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/page-boys-girls.php"
+                "value": "page-templates\/page-roster.php"
             }
         ]
     ],
@@ -125,5 +159,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1659917723
+    "modified": 1659989426
 }

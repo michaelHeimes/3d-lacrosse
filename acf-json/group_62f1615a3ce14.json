@@ -1,0 +1,44 @@
+{
+    "key": "group_62f1615a3ce14",
+    "title": "Contentless Page",
+    "fields": [
+        {
+            "key": "field_62f1617f090b3",
+            "label": "Remove From Sitemap",
+            "name": "remove_from_sitemap",
+            "type": "true_false",
+            "instructions": "Check this box when a page is a parent page only and doesn't have any content on it.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1659989321
+}
