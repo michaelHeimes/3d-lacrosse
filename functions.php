@@ -251,4 +251,4 @@ require_once(get_template_directory().'/inc/disable-gutenberg.php');
 require_once(get_template_directory().'/inc/admin.php'); 
 
 // Sitemap Removal
-require_once(get_template_directory().'/inc/sitemap-removal.php'); 
+require_once(get_template_directory().'/inc/sitemap-removal.php');

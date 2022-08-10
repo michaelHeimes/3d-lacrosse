@@ -76,6 +76,11 @@
 // Tooltips
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.tooltip.js
 
+// What Input
+//@prepros-prepend vendor/what-input.js
+
+// Swiper
+//@prepros-prepend vendor/swiper-bundle.js
 
 // DOM Ready
 (function($) {
@@ -114,6 +119,23 @@
             });
     
     }
+    
+    _app.display_on_load = function() {
+        $('.display-on-load').css('visibility', 'visible');
+    }
+    
+    _app.pros_slider = function() {
+        const swiper = new Swiper('.pros-slider', {
+          loop: true,
+          slidesPerView: 'auto',
+
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+        });
+    }    
             
     _app.init = function() {
         
@@ -121,6 +143,10 @@
         _app.foundation_init();
         _app.emptyParentLinks();
         _app.fixed_nav_hack();
+        
+        // Custom Functions
+        _app.display_on_load();
+        _app.pros_slider();
     }
     
     

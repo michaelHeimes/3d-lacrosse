@@ -70,7 +70,8 @@ header.site-header {
 					
 				}
 				
-			&.is-active {
+			&.is-active,
+			&.current-menu-ancestor {
 				span:before {
 					background-color: $brand-blue;
 				}
@@ -104,9 +105,10 @@ header.site-header {
 			}
 			
 			.menu.submenu.is-dropdown-submenu {
+				display: flex;
 				flex-direction: row;
 				align-items: flex-start;
-				justify-content: center;
+				justify-content: flex-end;
 				top: 70px;
 				left: 140px;
 				
@@ -116,6 +118,7 @@ header.site-header {
 					flex: 0 0 auto;
 					width: auto;
 					a {
+						color: $medium-gray;
 						padding: 0;
 						font-size: rem-calc(9);
 						letter-spacing: .9px;
@@ -123,19 +126,33 @@ header.site-header {
 						
 						span {
 							max-width: 60px;
+							
+							&.title {
+								display: none;
+								font-weight: bold;
+								text-transform: uppercase;	
+							}
+							
 						}
 						
 						svg,
 						img {
 							width: 39px;
 							height: auto;	
-						}
-						
+						}	
 					}
+
+				&.active,	
+				&.current-page-ancestor,
+				&:hover {
+					span.title {
+						display: block;
+					}
+				}					
+					
 				}
 				
 			&.js-dropdown-active {
-				display: flex;
 			}
 				
 			}

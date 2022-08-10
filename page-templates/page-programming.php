@@ -18,7 +18,7 @@ $card_rows = $fields['card_rows'];
 		
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-					<?php get_template_part('template-parts/content-region-child-banner');?>
+					<?php get_template_part('template-parts/content-defaut-banner');?>
 				
 					<div class="entry-content">
 					

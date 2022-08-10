@@ -112,31 +112,23 @@ $image = get_field('logo');
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
 										<div class="grid-x grid-padding-x align-center small-up-2 medium-up-3">
-											<?php			
-											$args = array(  
-												'post_type' => 'team_member',
-												'post_status' => 'publish',
-												'posts_per_page' => -1,
-												'orderby' => 'title',
-												'order' => 'ASC',
-												'meta_query' => array(
-													array(
-														'key' => 'region',
-														'value' => $page_id,
-														'compare' => 'LIKE'
-													),
-												),
-											);
-											
-											
-											$loop = new WP_Query( $args ); 
-											
-											if ( $loop->have_posts() ) : 
-												while ( $loop->have_posts() ) : $loop->the_post();
-													get_template_part('template-parts/loop-team-card');
-												endwhile;									
-											endif;
-											wp_reset_postdata(); 
+											<?php 
+												$bio_cards = get_field('bio_cards');
+												if( !empty($bio_cards) ):
+													foreach($bio_cards as $bio_card):
+														$bio_card_fields = $bio_card['bio_card'];
+
+														$args = array(
+															'photo' => $bio_card_fields['photo'],
+															'name' => $bio_card_fields['name'],
+															'title_&_affiliation' => $bio_card_fields['title_&_affiliation'],
+															'bio' => $bio_card_fields['bio'],
+														);
+
+													get_template_part('template-parts/loop', 'team-card', $args);
+
+													endforeach;
+												endif;
 											?>
 		
 										</div>

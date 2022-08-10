@@ -32,8 +32,8 @@ function lacrosse_3d_region_nav() {
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'region-nav',					// Adding custom nav id
-		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul class="%1$s %2$s" data-responsive-menu="accordion medium-dropdown" data-hover-delay="0" data-closing-time="0">%3$s</ul>',
+		'menu_class'		=> 'medium-horizontal menu display-on-load',	// Adding custom nav class
+		'items_wrap'		=> '<ul class="%1$s %2$s" data-responsive-menu="accordion medium-dropdown" data-hover-delay="0" data-closing-time="0" style="visibility: hidden;">%3$s</ul>',
 		'theme_location'	=> 'region-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
@@ -147,10 +147,32 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 				
 			}
 			
+						
+			// return
+			return $items;		
+			
+		}
+			
+		elseif ( $args->theme_location == 'social-links') {
+			
+			// loop
+			foreach( $items as &$item ) {
+				
+				// vars
+				$icon = get_field('icon', $item);
+				$size = 'full';						
+				// append icon
+				if( $icon ) {
+					
+					$item->title = '<span class="icon" aria-hidden="true"><img class="style-svg" src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="show-for-sr"' . $item->title . '</span>';
+					
+				}
+				
+			}
 			
 			// return
-			return $items;			
-			
+			return $items;		
+
 		} else {			
 			// loop
 			foreach( $items as &$item ) {}
@@ -213,6 +235,27 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
   } else {
     return $sorted_menu_items;
   }
+}
+
+
+//Add class to current grandparent
+add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
+function add_menu_parent_class( $items ) {
+
+$parents = array();
+foreach ( $items as $item ) {
+	if ( in_array('current-menu-item', $item->classes) || in_array('current-page-ancestor', $item->classes)  ) {
+		$parents[] = $item->menu_item_parent;
+	}
+}
+
+foreach ( $items as $item ) {
+	if ( in_array( $item->ID, $parents ) ) {
+		$item->classes[] = 'current-menu-ancestor'; 
+	}
+}
+
+return $items;    
 }
 
 

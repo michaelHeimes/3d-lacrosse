@@ -41,6 +41,10 @@ button,
 	position: relative;
 }
 
+.fh {
+	height: 100%;
+}
+
 .uppercase {
 	text-transform: uppercase;
 }
@@ -52,6 +56,10 @@ button,
 
 .reveal.team-reveal {
 	box-shadow: 6px 0px 20px 0px rgba(0,0,0,0.16);
+}
+
+.color-white {
+	color: $white;	
 }
 
 .table-wrap {

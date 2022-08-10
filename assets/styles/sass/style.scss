@@ -68,13 +68,16 @@
 // Import Motion-UI from vendor files
 @import "vendor/motion-ui";
 
+// Import Swiper
+@import "./css/vendor/swiper-bundle.min.css";
+
 /*--------------------------------------------------------------
 # Custom Styles
 --------------------------------------------------------------*/
 @import "global";
 @import "typography";
 @import "header";
-@import "hero";
+@import "footer";
 
 @import "_parts/team-card";
 

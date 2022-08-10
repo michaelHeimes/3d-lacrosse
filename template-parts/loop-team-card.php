@@ -1,7 +1,9 @@
 <?php
-	$post_id = get_the_ID();
-	$region = get_field('region');
-	$image = get_field('photo');
+	$row = get_row_index();
+	$image = $args['photo'];
+	$name = $args['name'];
+	$title_affiliation = $args['title_&_affiliation'];
+	$bio = $args['bio'];
 ?>
 <div class="team-card cell">
 	<div class="inner grid-x flex-dir-column align-middle">
@@ -15,11 +17,11 @@
 			<?php get_template_part('template-parts/icons-svgs/three-stripes');?>
 		</div>
 		<div class="relative text-center">
-			<h3 class="h4 uppercase"><?php the_title();?></h3>
-			<h4 class="h6"><?php echo get_the_title( $region );?></h4>
+			<h3 class="h4 uppercase"><?php echo $name;?></h3>
+			<h4 class="h6"><?php echo $title_affiliation;?></h4>
 		</div>
 		<div class="btn-wrap">
-			<button class="button<?php if($add_chev == 'true'):?> chev-link grid-x align-middle<?php endif;?>" data-open="person-<?php echo $post_id;?>">
+			<button class="button<?php if($add_chev == 'true'):?> chev-link grid-x align-middle<?php endif;?>" data-open="person-<?php echo $row ;?>">
 				<span>Bio</span>
 				<svg xmlns="http://www.w3.org/2000/svg" width="9.254" height="15.679" viewBox="0 0 9.254 15.679">
 				  <path id="Path_773" data-name="Path 773" d="M267.723,1265.463l7.132,7.132-7.132,7.132" transform="translate(-267.016 -1264.756)" fill="none" stroke="#000" stroke-width="2"/>
@@ -29,7 +31,7 @@
 	</div>
 </div>
 
-<div class="reveal team-reveal" id="person-<?php echo $post_id;?>" data-reveal>
+<div class="reveal team-reveal" id="person-<?php echo $row ;?>" data-reveal>
 	<div class="top-bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/team-reveal-lines.png);background-size: cover;">
 		<div class="grid-x align-right">
 			<button class="close-button" data-close aria-label="Close modal" type="button">
@@ -56,8 +58,8 @@
 							<?php get_template_part('template-parts/icons-svgs/three-stripes');?>
 						</div>
 						<div class="text-center">
-							<h3 class="h4 uppercase"><?php the_title();?></h3>
-							<h4 class="h5"><?php echo get_the_title( $region );?></h4>
+							<h3 class="h4 uppercase"><?php echo $name;?></h3>
+							<h4 class="h6"><?php echo $title_affiliation;?></h4>
 						</div>
 					</div>
 				</div>
@@ -68,7 +70,7 @@
 		<div class="cell">
 			<div class="inner">
 				<div class="text-wrap">
-					<?php the_field('bio');?>
+					<?php echo $bio;?>
 				</div>
 			</div>
 		</div>

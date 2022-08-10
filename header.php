@@ -29,7 +29,7 @@
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'lacrosse-3d' ); ?></a>
 		
 			<div data-sticky-container>
-				<header id="masthead" class="site-header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small" data-anchor="header">
+				<header id="masthead" class="site-header" role="banner">
 	
 					<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
 	

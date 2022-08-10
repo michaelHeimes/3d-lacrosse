@@ -120,37 +120,55 @@ $fields = get_fields();
 						<section class="pros text-center">
 							<div class="grid-container">
 								<div class="top grid-x grid-padding-x">
-									<div class="cell small-12 tablet-10 tablet-offset-1">
+									<div class="cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2">
 										<div class="inner">
 										<?php if( $pros_heading = $fields['pros_heading']):?>
 											<h2><?php echo $pros_heading;?></h2>
 										<?php endif;?>
-										<?php if( $pros_heading = $fields['pros_heading']):?>
-											<p><?php echo $pros_heading;?></p>
+										<?php if( $pros_text = $fields['pros_text']):?>
+											<p><?php echo $pros_text;?></p>
 										<?php endif;?>
 										</div>
 									</div>
 								</div>
 								<?php if ($pros_slides = $fields['pros_slider']):?>
-								<div class="cards-wrap grid-x grid-padding-x small-up-2 tablet-up-4">
-									<?php foreach($pros_slides as $pros_slide):?>
-									<div class="cell">
-										<div class="inner">
-											<div class="photo-wrap">
-												<?php 
-												$image = $pros_slide['image'];
-												if( !empty( $image ) ): ?>
-													<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-												<?php endif; ?>
-											</div>
-											<div class="text-wrap">
-												<h4><?php echo $pros_slide['name'];?></h4>
-												<p><?php echo $pros_slide['team_position'];?></p>
-												<p class="region"><?php echo $pros_slide['region'];?></p>
+								<div class="cards-wrap pros-slider grid-x align-middle">
+									<button class="swiper-button-prev">
+										<svg xmlns="http://www.w3.org/2000/svg" width="51.5" height="103" viewBox="0 0 51.5 103">
+										  <g id="Group_76" data-name="Group 76" transform="translate(-51 -4343.303)">
+											<path id="Path_736" data-name="Path 736" d="M51.5,0V103a51.5,51.5,0,0,1,0-103Z" transform="translate(51 4343.303)" fill="#efefef" opacity="0.794"/>
+											<path id="Path_737" data-name="Path 737" d="M86.7,16741.152l-18.483,18.482,18.483,18.482" transform="translate(1.285 -12365.35)" fill="none" stroke="#019fdb" stroke-width="2"/>
+										  </g>
+										</svg>
+									</button>
+									<div class="swiper-wrapper small-up-1 medium-up-2 tablet-up-3 large-up-4">
+										<?php foreach($pros_slides as $pros_slide):?>
+										<div class="swiper-slide cell">
+											<div class="inner">
+												<div class="photo-wrap">
+													<?php 
+													$image = $pros_slide['photo'];
+													if( !empty( $image ) ): ?>
+														<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+													<?php endif; ?>
+												</div>
+												<div class="text-wrap">
+													<h4><?php echo $pros_slide['name'];?></h4>
+													<p><?php echo $pros_slide['team_position'];?></p>
+													<p class="region"><?php echo $pros_slide['region'];?></p>
+												</div>
 											</div>
 										</div>
+										<?php endforeach;?>
 									</div>
-									<?php endforeach;?>
+									<button class="swiper-button-next">
+										<svg xmlns="http://www.w3.org/2000/svg" width="51.5" height="103" viewBox="0 0 51.5 103">
+									  	<g id="Group_32" data-name="Group 32" transform="translate(102.5 4271) rotate(180)">
+											<path id="Path_736" data-name="Path 736" d="M51.5,0V103a51.5,51.5,0,0,1,0-103Z" transform="translate(51 4168)" fill="#efefef" opacity="0.794"/>
+											<path id="Path_737" data-name="Path 737" d="M86.7,16741.152l-18.483,18.482,18.483,18.482" transform="translate(1.285 -12540.652)" fill="none" stroke="#019fdb" stroke-width="2"/>
+									  	</g>
+										</svg>
+									</button>
 								</div>
 								<?php endif;?>
 							</div>
