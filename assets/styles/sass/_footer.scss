@@ -1,0 +1,34 @@
+footer#colophon {
+	
+	.site-info {
+		ul#footer-links,
+		ul#social-links {
+			@include breakpoint(medium down) {
+				justify-content: center;
+				width: 100%;
+			}
+		}
+	}
+	
+	.right {
+		.top,
+		.bottom {
+			@include breakpoint(medium down) {
+				text-align: center;
+			}
+		}
+	}
+	
+	.copyright {
+		margin-bottom: 0;
+		@include breakpoint(medium down) {
+			text-align: center;
+		}
+		@include breakpoint(tablet) {
+			br {
+				display: none;
+			}
+		}
+	}
+	
+}

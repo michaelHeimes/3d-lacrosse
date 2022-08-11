@@ -1,4 +1,4 @@
-<header class="entry-header banner text-center black-bg">
+<header class="entry-header banner text-center black-bg relative">
 	<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/bp-banner-bg.svg);"></div>
 	<div class="relative">
 		
@@ -7,9 +7,9 @@
 		
 		//$parent_ID = $post->post_parent;
 		$parent_data = get_post($post->post_parent);
-		$parent_slug = $parent_data->post_name;
-		
+		$parent_slug = $parent_data->post_name;		
 		$current = get_post($post->ID);
+		
 		if($current->post_parent){      
 			  $parent = get_post($current->post_parent);
 			  $image = get_field('logo', $parent->ID);
@@ -17,6 +17,8 @@
 					$grandparent = get_post($parent->post_parent);
 					$image = get_field('logo', $grandparent->ID);
 			  }
+		} else {
+			$image = get_field('logo');
 		}
 		
 		
@@ -38,7 +40,7 @@
 			?>
 		</h1>
 		
-		<?php get_template_part('template-parts/region-page-nav');?>
+		<?php get_template_part('template-parts/nav-banner-nav');?>
 	</div>
 	
 </header><!-- .entry-header -->

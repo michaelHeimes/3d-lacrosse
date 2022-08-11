@@ -17,7 +17,7 @@ function lacrosse_3d_top_nav() {
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
 		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true" data-hover-delay="0" data-closing-time="0">%3$s</ul>',
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion tablet-dropdown" data-submenu-toggle="true" data-hover-delay="0" data-closing-time="0">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
@@ -33,7 +33,7 @@ function lacrosse_3d_region_nav() {
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'region-nav',					// Adding custom nav id
 		'menu_class'		=> 'medium-horizontal menu display-on-load',	// Adding custom nav class
-		'items_wrap'		=> '<ul class="%1$s %2$s" data-responsive-menu="accordion medium-dropdown" data-hover-delay="0" data-closing-time="0" style="visibility: hidden;">%3$s</ul>',
+		'items_wrap'		=> '<ul class="%1$s %2$s" data-responsive-menu="accordion tablet-dropdown" data-hover-delay="0" data-closing-time="0" style="visibility: hidden;">%3$s</ul>',
 		'theme_location'	=> 'region-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
@@ -141,7 +141,7 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 				// append icon
 				if( $icon ) {
 					
-					$item->title = '<span class="icon-title-wrap grid-x flex-dir-column align-middle align-center"><span class="icon" aria-hidden="true"><img class="style-svg" src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="title">' . $item->title . '</span></span>';
+					$item->title = '<span class="icon-title-wrap grid-x flex-dir-column align-middle align-center"><span class="icon" aria-hidden="true"><img src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="title">' . $item->title . '</span></span>';
 					
 				}
 				

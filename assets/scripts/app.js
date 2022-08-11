@@ -62,7 +62,7 @@
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.slider.js
 
 // Anchor Link Scrolling
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.smoothScroll.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.smoothScroll.js
 
 // Sticky Elements
 //@prepros-prepend vendor/foundation/js/plugins/foundation.sticky.js
@@ -120,6 +120,23 @@
     
     }
     
+    _app.mobile_nav = function() {
+        $(document).on('click', 'a#menu-toggle', function(){
+            
+            if ( $(this).hasClass('clicked') ) {
+                $(this).removeClass('clicked');
+                $('#off-canvas').fadeOut(200);
+            
+            } else {
+            
+                $(this).addClass('clicked');
+                $('#off-canvas').fadeIn(200);
+            
+            }
+            
+        });
+    }
+    
     _app.display_on_load = function() {
         $('.display-on-load').css('visibility', 'visible');
     }
@@ -142,11 +159,12 @@
         // Standard Functions
         _app.foundation_init();
         _app.emptyParentLinks();
-        _app.fixed_nav_hack();
+        //_app.fixed_nav_hack();
         
         // Custom Functions
         _app.display_on_load();
         _app.pros_slider();
+        _app.mobile_nav();
     }
     
     

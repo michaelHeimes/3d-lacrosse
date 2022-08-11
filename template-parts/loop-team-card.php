@@ -11,7 +11,7 @@
 			<?php 
 			if( !empty( $image ) ): ?>
 			<div class="img-wrap team-img-wrap circle">
-				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+				<img src="<?php echo $image['sizes']['team-photo']; ?>" width="<?php echo $image['sizes']['team-photo-width']; ?>" height="<?php echo $image['sizes']['team-photo-height']; ?>" alt="<?php echo $image['caption']; ?>" />
 			</div>
 			<?php endif; ?>
 			<?php get_template_part('template-parts/icons-svgs/three-stripes');?>
@@ -52,7 +52,7 @@
 							<?php 
 							if( !empty( $image ) ): ?>
 							<div class="img-wrap team-img-wrap circle">
-								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<img src="<?php echo $image['sizes']['team-photo']; ?>" width="<?php echo $image['sizes']['team-photo-width']; ?>" height="<?php echo $image['sizes']['team-photo-height']; ?>" alt="<?php echo $image['caption']; ?>" />
 							</div>
 							<?php endif; ?>
 							<?php get_template_part('template-parts/icons-svgs/three-stripes');?>

@@ -53,7 +53,8 @@ $card_rows = $fields['card_rows'];
 												$image = $row_card['image'];
 												if( !empty( $image ) ): ?>
 												<div class="image-wrap relative">
-													<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+
+													<img src="<?php echo $image['sizes']['event-thumb']; ?>" width="<?php echo $image['sizes']['event-thumb-width']; ?>" height="<?php echo $image['sizes']['event-thumb-height']; ?>" alt="<?php echo $image['caption']; ?>" />
 													<p class="callout h5 uppercase"><?php echo $row_card['callout'];?></p>
 												</div>
 												<?php endif; ?>

@@ -252,3 +252,9 @@ require_once(get_template_directory().'/inc/admin.php');
 
 // Sitemap Removal
 require_once(get_template_directory().'/inc/sitemap-removal.php');
+
+// Slugify
+require_once(get_template_directory().'/inc/slugify.php');
+
+// Image Sizes
+require_once(get_template_directory().'/inc/image-sizes.php');

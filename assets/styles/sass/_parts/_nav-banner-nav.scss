@@ -1,0 +1,19 @@
+.page-nav {
+	a,
+	span,
+	button {
+		color: $white;
+		font-family: $font-jockey;
+		text-transform: uppercase;
+	}
+	.dropdown-pane {
+		li {
+			width: 100%;
+			text-align: left;
+		}
+		a {
+			font-family: $body-font-family;
+			color: $black;
+		}
+	}
+}

@@ -45,7 +45,7 @@
 							</div>
 							<div class="grid-x grid-padding-x align-spaced align-middle">
 								<?php foreach($partners_logos as $partners_logo):?>
-								<div class="cell shrink">
+								<div class="cell small-12 medium-shrink">
 									<img src="<?php echo esc_url($partners_logo['sizes']['large']); ?>" alt="<?php echo esc_attr($partners_logo['alt']); ?>" />
 								</div>
 								<?php endforeach;?>
@@ -56,12 +56,12 @@
 					<div class="site-info black-bg">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
-								<div class="left cell shrink">
+								<div class="left cell small-12 tablet-shrink">
 									<div class="grid-x flex-dir-column">
 										<div class="top"><?php lacrosse_3d_footer_links(); ?></div>
 										<div class="bottom">
-											<div class="grid-x aligm-middle">
-												<div>Socials</div>
+											<div class="grid-x align-middle">
+												<div class="color-white show-for-tablet">Socials</div>
 												<?php lacrosse_3d_social_links(); ?>
 											</div>
 										</div>
@@ -71,7 +71,7 @@
 									<div class="grid-x grid-padding-x flex-dir-column-reverse tablet-flex-dir-row">
 										<div class="center cell small-12 tablet-auto">
 											<div class="fh grid-x flex-dir-column align-right">
-												<p class="text-center source-org copyright small">Copyright &copy; <?php echo date('Y'); ?>, 3STEP Sports. All Rights Reserved. - 
+												<p class="source-org copyright small">Copyright &copy; <?php echo date('Y'); ?>, 3STEP Sports.<br> All Rights Reserved. - 
 													<?php 
 													$link = get_field('privacy_policy', 'option');
 													if( $link ): 

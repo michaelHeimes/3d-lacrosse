@@ -28,13 +28,11 @@
 	<?php wp_body_open(); ?>
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'lacrosse-3d' ); ?></a>
 		
-			<div data-sticky-container>
-				<header id="masthead" class="site-header" role="banner">
-	
-					<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
-	
-				</header><!-- #masthead -->
-			</div>
+			<header id="masthead" class="site-header" role="banner">
+
+				<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
+
+			</header><!-- #masthead -->
 				
 				<div class="off-canvas-wrapper">
 				

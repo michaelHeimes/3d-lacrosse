@@ -89,7 +89,7 @@ if($current->post_parent){
 											<?php if( $image = $coach['photo'] ):?>
 											<div class="cell shrink">
 												<div class="img-wrap">
-													<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="75px"/>
+													<img src="<?php echo $image['sizes']['team-photo']; ?>" width="75px" height="75px" alt="<?php echo $image['caption']; ?>" />
 												</div>
 											</div>
 											<?php endif;?>

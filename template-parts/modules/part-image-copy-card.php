@@ -1,9 +1,16 @@
 <?php 
-	$image_copy_card = get_field('image_copy_card');
+	$unique_id = get_sub_field('unique_id');
+
+	if(!is_page_template()) {
+		$image_copy_card = get_sub_field('image_copy_card');
+	} else {
+		$image_copy_card = get_field('image_copy_card');
+	}
 	if( !empty($image_copy_card) ):
 		$layout = $image_copy_card['layout'];
 ?>
-<section class="img-copy-card type-text-btn <?php echo $layout;?>">
+
+<section<?php if( !empty($unique_id) ):?> id="<?php echo slugify($unique_id);?>"<?php endif;?> class="<?php if(!is_page_template()):?>module <?php endif;?>img-copy-card type-text-btn <?php echo $layout;?>">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x<?php if($layout == 'image-right'):?> tablet-flex-dir-row-reverse<?php endif;?> align-top">
 

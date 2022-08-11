@@ -6,8 +6,17 @@
  */
 ?>
 
-<div class="off-canvas position-right" id="off-canvas" data-off-canvas>
-	<?php lacrosse_3d_off_canvas_nav(); ?>
+<div class="off-canvas" id="off-canvas" data-off-canvas style="display: none;">
+
+	<div class="inner">
+
+		<?php lacrosse_3d_region_nav(); ?>
+	
+		<?php lacrosse_3d_off_canvas_nav(); ?>
+		
+		<?php lacrosse_3d_social_links();?>
+		
+	</div>
 
 	<?php if ( is_active_sidebar( 'offcanvas' ) ) : ?>
 

@@ -19,22 +19,8 @@ $image = get_field('logo');
 			<main id="primary" class="site-main">
 		
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				
-					<header class="entry-header banner text-center black-bg">
-						<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/bp-banner-bg.svg);"></div>
-						<div class="relative">
-							
-							<?php 
-							if( !empty( $image ) ): ?>
-								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-							<?php endif; ?>
-							
-							<h1><?php echo $region_title ;?></h1>
-							
-							<?php get_template_part('template-parts/region-page-nav');?>
-						</div>
-						
-					</header><!-- .entry-header -->
+					
+					<?php get_template_part('template-parts/content-defaut-banner');?>
 				
 					<div class="entry-content">
 					

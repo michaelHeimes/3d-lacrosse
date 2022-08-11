@@ -58,7 +58,8 @@ $card_rows = $fields['card_rows'];
 												if( !empty( $image ) ): ?>
 												<div class="left image-wrap cell shrink">
 													<div class="circle">
-														<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="129px"/>
+	
+														<img src="<?php echo $image['sizes']['team-photo']; ?>" width="129px" alt="<?php echo $image['caption']; ?>" />
 													</div>
 													<?php get_template_part('template-parts/icons-svgs/three-stripes');?>
 												</div>
@@ -79,36 +80,16 @@ $card_rows = $fields['card_rows'];
 						</section>
 						<?php endif;?>
 						
-						<?php if( $past_alumni = $fields['past_alumni']):?>
+						<?php if( $past_alumni = $fields['past_alumni_shortcode']):?>
 						<section class="past-alumni">
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12">
 										<h2>Past Alumni</h2>
-										
+	
 										<div class="table-wrap">
-											<table>
-												<thead>
-													<tr>
-														<th>YEAR</th>
-														<th>PLAYER</th>
-														<th>SCHOOL</th>
-														<th>DIVISION</th>
-														<th>3d REGION</th>
-													</tr>
-												</thead>
-												<tbody>
-													<?php foreach ($past_alumni as $past_alum):?>
-													<tr>
-														<td><?php echo $past_alum['year'];?></td>
-														<td><?php echo $past_alum['player_name'];?></td>
-														<td><?php echo $past_alum['school'];?></td>
-														<td><?php echo $past_alum['division'];?></td>
-														<td><?php echo $past_alum['3d_region'];?></td>
-													</tr>
-													<?php endforeach;?>
-												</tbody>
-											</table>
+											<?php $alumni_shortcode = get_post_meta($post->ID,'past_alumni_shortcode',true);
+											echo do_shortcode($alumni_shortcode);?>
 										</div>
 										
 									</div>

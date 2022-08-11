@@ -53,7 +53,7 @@
 @include foundation-dropdown-menu;
 
 // Layout components
-@include foundation-off-canvas;
+//@include foundation-off-canvas;
 @include foundation-reveal;
 @include foundation-sticky;
 //@include foundation-title-bar;
@@ -80,6 +80,7 @@
 @import "footer";
 
 @import "_parts/team-card";
+@import "_parts/nav-banner-nav";
 
 @import "_modules/img-copy-card";
 
