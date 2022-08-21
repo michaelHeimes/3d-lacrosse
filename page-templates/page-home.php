@@ -30,10 +30,24 @@ $fields = get_fields();
 						<div class="hero-bottom">
 							<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/home-hero-bg.svg);"></div>
 							<?php get_template_part('template-parts/modules/part-image-copy-card');?>
+							<div class="grid-container">
+								<div class="grid-x grid-padding-x">
+									<div class="cell small-12">
+										<a class="region-link" href="#regions" data-smooth-scroll>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24.447" height="28.414" viewBox="0 0 24.447 28.414">
+							  				<g id="Group_196" data-name="Group 196" transform="translate(-104.793 -1412.525)">
+												<line id="Line_3" data-name="Line 3" y2="27" transform="translate(117.016 1412.525)" fill="none" stroke="#fff" stroke-width="2"/>
+												<path id="Path_733" data-name="Path 733" d="M281,13884.472l11.516,11.517,11.516-11.517" transform="translate(-175.5 -12456.463)" fill="none" stroke="#fff" stroke-width="2"/>
+							  				</g>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 						
 						
-						<section class="find-region text-center">
+						<section id="regions" class="find-region text-center">
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12">

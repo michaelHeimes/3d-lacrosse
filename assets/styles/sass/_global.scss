@@ -27,6 +27,10 @@ BACKGROUND COLORS
 /*********************
 RE-USED ELEMENTS
 *********************/
+.inner-content {
+	overflow: hidden;
+}
+
 button,
 .button {
 	cursor: pointer;
@@ -35,6 +39,23 @@ button,
 	a {
 		color: $black;
 	}
+	span {
+		transform: translateY(-0.16em);
+		display: inline-block;
+	}
+	svg {
+		margin-left: 0.6rem;
+		transition: transform .3s ease;
+	}
+	
+&.chev-link {
+	&:hover {
+		svg {
+			transform: translateX(.7em);
+		}
+	}
+}
+	
 }
 
 .relative {

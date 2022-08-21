@@ -12,9 +12,9 @@
 
 <section<?php if( !empty($unique_id) ):?> id="<?php echo slugify($unique_id);?>"<?php endif;?> class="<?php if(!is_page_template()):?>module <?php endif;?>img-copy-card type-text-btn <?php echo $layout;?>">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x<?php if($layout == 'image-right'):?> tablet-flex-dir-row-reverse<?php endif;?> align-top">
+		<div class="inner grid-x grid-padding-x<?php if($layout == 'image-right'):?> tablet-flex-dir-row-reverse<?php endif;?> align-top">
 
-			<div class="left cell small-12 tablet-6">
+			<div class="left cell small-12 tablet-6 large-7">
 				<?php 
 					if( !empty($image_copy_card['image']) ):
 					$image = $image_copy_card['image'];
@@ -24,10 +24,21 @@
 				</div>
 				<?php endif;?>
 			</div>
-			<div class="right black-bg cell small-12 tablet-6">
+			<div class="right black-bg cell small-12 tablet-6 large-5">
 				<?php if( !empty($image_copy_card['text']) ):?>
 				<div class="text-wrap black-bg">
 					<?php echo $image_copy_card['text'];?>
+					<svg class="thin-stripes" xmlns="http://www.w3.org/2000/svg" width="192.309" height="72.179" viewBox="0 0 192.309 72.179">
+					  <g id="Group_65" data-name="Group 65" transform="translate(-579.846 -1277.649)">
+						<line id="Line_7" data-name="Line 7" x1="70.484" y2="71.477" transform="translate(580.202 1278)" fill="none" stroke="#efefef" stroke-width="1"/>
+						<line id="Line_8" data-name="Line 8" x1="70.484" y2="71.477" transform="translate(600.056 1278)" fill="none" stroke="#efefef" stroke-width="1"/>
+						<line id="Line_9" data-name="Line 9" x1="70.484" y2="71.477" transform="translate(620.904 1278)" fill="none" stroke="#efefef" stroke-width="1"/>
+						<line id="Line_10" data-name="Line 10" x1="70.484" y2="71.477" transform="translate(640.758 1278)" fill="none" stroke="#efefef" stroke-width="1"/>
+						<line id="Line_11" data-name="Line 11" x1="70.484" y2="71.477" transform="translate(660.613 1278)" fill="none" stroke="#efefef" stroke-width="1"/>
+						<line id="Line_12" data-name="Line 12" x1="70.484" y2="71.477" transform="translate(680.467 1278)" fill="none" stroke="#efefef" stroke-width="1"/>
+						<line id="Line_13" data-name="Line 13" x1="70.484" y2="71.477" transform="translate(701.315 1278)" fill="none" stroke="#efefef" stroke-width="1"/>
+					  </g>
+					</svg>
 				</div>
 				<?php endif;?>
 				<?php 

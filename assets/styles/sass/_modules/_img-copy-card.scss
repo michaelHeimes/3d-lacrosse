@@ -1,8 +1,83 @@
 .img-copy-card  {
+	.inner {
+		@include breakpoint(tablet) {
+			justify-content: flex-end;
+			padding-bottom: 52px;
+		}
+	}
 	.quote-mark {
 		font-family: $font-jockey;
 		color: $brand-blue;
 		font-size: rem-calc(200);
 		line-height: 1;
+	}
+	.left {
+		position: relative;
+		z-index: 2;
+		padding-bottom: 4rem;
+		
+		@include breakpoint(tablet) {
+			position: absolute;
+			right: -1rem;
+		}
+		
+		.img-wrap {
+			position: relative;
+			
+			@include breakpoint(large) {
+				margin-left: -3%;
+			}
+			
+			img {
+				display: block
+			}
+			
+		&:after {
+			content: '';
+			@include absolute-cover;
+			top: 50%;
+			background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,160,221,1) 100%);
+		}
+			
+		}
+	}
+	.right {
+		position: relative;
+		z-index: 1;
+		padding-top: 3.4rem;
+		padding-bottom: 2.5rem;
+				
+			@include breakpoint(tablet) {
+				transform: translateY(52px);
+			}
+			
+		.text-wrap {
+			@include breakpoint(large) {
+				padding-right: 3%;
+			}
+		}
+		
+		svg.thin-stripes {
+			position: absolute;
+			left: 100%;
+			right: 0;
+			bottom: 0;
+		}
+		
+		@include breakpoint(tablet) {
+			&:after {
+				content: '';
+				@include absolute-cover;
+				left: -71px;
+				right: -71px;
+				background-color: $black;
+				z-index: -1;
+			}
+		}
+		
+		.btns-wrap {
+			padding-top: 2.15rem;
+		}
+		
 	}
 }
