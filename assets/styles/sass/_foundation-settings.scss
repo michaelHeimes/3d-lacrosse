@@ -149,15 +149,15 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   "small": (
-	'h1': ('font-size': 24),
-	'h2': ('font-size': 20),
-	'h3': ('font-size': 19),
+	'h1': ('font-size': 43),
+	'h2': ('font-size': 46),
+	'h3': ('font-size': 30),
 	'h4': ('font-size': 18),
 	'h5': ('font-size': 16),
 	'h6': ('font-size': 12),
   ),
   "medium": (
-	'h1': ('font-size': 48),
+	'h1': ('font-size': 71),
 	'h2': ('font-size': 46),
 	'h3': ('font-size': 30),
 	'h4': ('font-size': 20),
@@ -236,17 +236,17 @@ $input-error-font-weight: $global-weight-bold;
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
+$accordion-background: $black;
 $accordion-plusminus: true;
 $accordion-plus-content: '\002B';
 $accordion-minus-content: '\2013';
-$accordion-title-font-size: rem-calc(12);
+$accordion-title-font-size: rem-calc(30);
 $accordion-item-color: $primary-color;
-$accordion-item-background-hover: $light-gray;
+$accordion-item-background-hover: $black;
 $accordion-item-padding: 1.25rem 1rem;
-$accordion-content-background: $white;
-$accordion-content-border: 1px solid $light-gray;
-$accordion-content-color: $body-font-color;
+$accordion-content-background: $black;
+$accordion-content-border: 0px solid $light-gray;
+$accordion-content-color: $white;
 $accordion-content-padding: 1rem;
 
 // 8. Accordion Menu

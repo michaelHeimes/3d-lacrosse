@@ -43,7 +43,7 @@
 									<h2><?php the_field('partners_heading', 'option');?></h2>
 								</div>
 							</div>
-							<div class="grid-x grid-padding-x align-spaced align-middle">
+							<div class="bottom grid-x grid-padding-x align-spaced align-middle">
 								<?php foreach($partners_logos as $partners_logo):?>
 								<div class="cell small-12 medium-shrink">
 									<img src="<?php echo esc_url($partners_logo['sizes']['large']); ?>" alt="<?php echo esc_attr($partners_logo['alt']); ?>" />
@@ -53,9 +53,12 @@
 						</div>
 					</div>
 					<?php endif;?>
-					<div class="site-info black-bg">
+					<div class="site-info">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
+								<div class="cell small-12">
+									<div class="break"></div>
+								</div>
 								<div class="left cell small-12 tablet-shrink">
 									<div class="grid-x flex-dir-column">
 										<div class="top"><?php lacrosse_3d_footer_links(); ?></div>

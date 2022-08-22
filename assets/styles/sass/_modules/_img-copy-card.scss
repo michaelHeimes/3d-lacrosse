@@ -1,4 +1,6 @@
 .img-copy-card  {
+	position: relative;
+	padding-bottom: 7.9rem;
 	.inner {
 		@include breakpoint(tablet) {
 			justify-content: flex-end;
@@ -10,15 +12,22 @@
 		color: $brand-blue;
 		font-size: rem-calc(200);
 		line-height: 1;
+		position: absolute;
+		top: 40px;
 	}
 	.left {
 		position: relative;
 		z-index: 2;
-		padding-bottom: 4rem;
+		right: -1rem;
+		
+		@include breakpoint(medium down) {
+			margin-bottom: -7rem;
+		}
 		
 		@include breakpoint(tablet) {
 			position: absolute;
 			right: -1rem;
+			padding-bottom: 4rem;
 		}
 		
 		.img-wrap {
@@ -46,6 +55,12 @@
 		z-index: 1;
 		padding-top: 3.4rem;
 		padding-bottom: 2.5rem;
+		
+			@include breakpoint(medium down) {
+				padding-top: 9.35rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
 				
 			@include breakpoint(tablet) {
 				transform: translateY(52px);
@@ -76,8 +91,61 @@
 		}
 		
 		.btns-wrap {
-			padding-top: 2.15rem;
+			padding-top: 1.25rem;
+			@include breakpoint(medium) {
+				padding-top: 2.15rem;
+			}
 		}
 		
 	}
+	
+&.img-left {
+	.left {
+		@include breakpoint(medium down) {
+			right: auto;
+			left: -1rem;
+		}
+	}
+}
+	
+&.type-quote {
+	.left {
+		@include breakpoint(medium down) {
+			margin-bottom: 0;
+			.img-wrap {
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					left: -2rem;
+					right: -2rem;
+					height: 50%;
+					bottom: 0;
+					background-color: $black;
+				}
+			}
+		}
+	}
+	.right {
+		.text-wrap {
+
+			padding-bottom: 1.45rem;
+			@include breakpoint(tablet) {
+				padding-top: 5rem;
+			}
+			p {
+				font-size: rem-calc(24);
+				line-height:  rem-calc(38);
+				margin-bottom: 2rem;
+			}
+			citation {
+				font-size: rem-calc(18);
+				line-height:  rem-calc(34);
+				color: $dark-gray;
+			}
+		}
+	}
+}
+	
 }

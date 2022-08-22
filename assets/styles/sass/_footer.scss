@@ -1,12 +1,33 @@
 footer#colophon {
-	
+
 	.site-info {
+		padding: 0rem 4.15rem 1rem;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(0, 160, 221) 100%);
 		ul#footer-links,
 		ul#social-links {
 			@include breakpoint(medium down) {
 				justify-content: center;
 				width: 100%;
 			}
+		}
+		p,
+		a {
+			color: $white;
+		}
+		.break {
+			border-top: 1px solid #707070;
+			padding-top: 2.4rem;
+		}
+		.top {
+			padding-bottom: 1.1rem;
+			@include breakpoint(tablet) {
+				padding-bottom: 2.6rem;
+			}
+		}
+		.copyright {
+			font-size: rem-calc(14);
+			line-height: rem-calc(16);
+			padding-bottom: 0.3rem;
 		}
 	}
 	
@@ -15,6 +36,21 @@ footer#colophon {
 		.bottom {
 			@include breakpoint(medium down) {
 				text-align: center;
+			}
+		}
+	}
+	
+	ul#footer-links {
+		@include breakpoint(medium down) {
+			padding-bottom: 4.08rem;
+		}
+		li {
+			a {
+				color: $white;
+				font-size: rem-calc(14);
+				line-height: rem-calc(19);
+				font-weight: bold;
+				text-transform: uppercase;
 			}
 		}
 	}

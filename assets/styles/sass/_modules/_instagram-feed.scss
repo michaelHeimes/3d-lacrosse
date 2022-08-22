@@ -1,0 +1,15 @@
+.instagram-feed {
+	h2 {
+		color: $brand-blue;
+	}
+	a {
+		color: $white;
+		svg {
+			margin-right: 0.5rem;
+		}
+	}
+	.h5 {
+		margin: 0;
+		color: $white;
+	}
+}
