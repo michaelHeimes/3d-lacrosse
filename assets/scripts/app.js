@@ -141,6 +141,38 @@
         $('.display-on-load').css('visibility', 'visible');
     }
 
+    _app.page_nav_dropdown = function() {
+        if( $('.page-nav').length ) {
+            let $pageNav = $('.page-nav');
+            let $toggleBtn = $($pageNav).find('#page-nav-toggle');
+            let $currentPage = $($pageNav).find('.is-active');
+            let $currentPageTitle = $currentPage.text();
+            
+                        
+            $($toggleBtn).click(function(e){
+                e.preventDefault();
+                $(this).next('.grid-x').fadeToggle(200);
+                $(this).toggleClass('open');
+            });
+            
+            $(window).on("load resize", function() {
+            
+                if ($(window).width() < 640) {
+                    $($toggleBtn).text($currentPageTitle);
+                    $($currentPage).hide();
+                } else {
+                    $($currentPage).show();
+                }
+                
+                if ($(window).width() > 639) {
+                    
+                }
+                
+            });
+            
+        }
+    }
+
     _app.home_region_dropdown = function() {
         if( $('body').hasClass('home') ) {
             
@@ -197,6 +229,7 @@
         
         // Custom Functions
         _app.display_on_load();
+        _app.page_nav_dropdown();
         _app.home_region_dropdown();
         _app.pros_slider();
         _app.team_dropdown();

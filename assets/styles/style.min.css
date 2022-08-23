@@ -9126,8 +9126,12 @@ footer#colophon .copyright {
   margin-bottom: 1.1rem;
 }
 
+.child-sibling-links {
+  position: relative;
+  z-index: 3;
+}
+
 .page-nav {
-  padding: 0 3rem;
   height: 100%;
   max-width: 1054px;
   min-height: 60px;
@@ -9136,9 +9140,34 @@ footer#colophon .copyright {
   background-color: #000;
   border-radius: 30px;
 }
+@media print, screen and (min-width: 40em) {
+  .page-nav {
+    padding: 0 3rem;
+  }
+}
 .page-nav > .grid-x {
   position: relative;
   height: 100%;
+}
+@media print, screen and (max-width: 39.99875em) {
+  .page-nav > .grid-x {
+    position: absolute;
+    z-index: 2;
+    top: 62px;
+    left: 1rem;
+    right: 1rem;
+    height: auto;
+    background-color: #000;
+    border-radius: 0 0 30px 30px;
+    display: none;
+  }
+}
+@media print, screen and (min-width: 40em) {
+  .page-nav > .grid-x {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .page-nav > img {
   position: absolute;
@@ -9162,10 +9191,26 @@ footer#colophon .copyright {
   background-size: 100% auto;
   background-position: 0 50%;
 }
+.page-nav #page-nav-toggle {
+  color: #019FDB;
+  width: 100%;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.16);
+  background-image: url(../images/page-nav-toggle-bg.png);
+  background-size: auto;
+  background-position: 100% 50%;
+  -webkit-transition: border-radius 0.25s ease;
+  transition: border-radius 0.25s ease;
+}
+.page-nav #page-nav-toggle.open {
+  border-radius: 30px 30px 0 0;
+}
 .page-nav a,
 .page-nav span,
 .page-nav button {
   color: #fff;
+  font-size: 1.3125rem;
   font-family: "Jockey One", sans-serif;
   text-transform: uppercase;
   position: relative;
@@ -9190,10 +9235,23 @@ footer#colophon .copyright {
   height: 11px;
   background-color: transparent;
 }
-.page-nav a.is-active-parent:after,
+.page-nav a.is-active-parent:after, .page-nav a.is-active-page:after,
 .page-nav span.is-active-parent:after,
-.page-nav button.is-active-parent:after {
+.page-nav span.is-active-page:after,
+.page-nav button.is-active-parent:after,
+.page-nav button.is-active-page:after {
   background-color: #019FDB;
+}
+.page-nav .link-wrap ul {
+  width: 100%;
+}
+.page-nav .link-wrap ul li {
+  width: 100%;
+}
+.page-nav .link-wrap ul li a,
+.page-nav .link-wrap ul li button {
+  display: block;
+  width: 100%;
 }
 .page-nav .dropdown-pane {
   padding-bottom: 3rem;

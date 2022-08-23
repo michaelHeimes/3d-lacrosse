@@ -12,9 +12,10 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 large-10 large-offset-1">
-				<div class="page-nav">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/page-nav-bg.svg">
-					<div class="grid-x grid-margin-x align-justify align-middle"<?php if( !is_page_template() ):?> data-smooth-scroll data-animation-easing="swing"<?php endif;?>>
+				<nav class="page-nav">
+					<img class="show-for-medium" src="<?php echo get_template_directory_uri(); ?>/assets/images/page-nav-bg.svg">
+					<button class="hide-for-medium black-bg" type="button" id="page-nav-toggle"></button>
+					<div class="grid-x grid-margin-x flex-dir-column medium-flex-dir-row align-middle"<?php if( !is_page_template() ):?> data-smooth-scroll data-animation-easing="swing"<?php endif;?>>
 
 						<?php
 						
@@ -108,22 +109,26 @@
 										};
 									?>
 	
-										<div class="cell shrink relative">
+										<div class="link-wrap cell small-12 medium-shrink relative">
+											<ul class="menu">
 											<?php if (count($pages) > 0 && get_field('remove_from_sitemap')):?>
+											<li>
 												<button<?php if($current->post_parent == $loop_ID):?> class="is-active-parent"<?php endif;?> data-toggle="dropdown-for-<?php echo $loop_ID;?>"><?php the_title(); ?></button>
 												<div class="dropdown-pane" id="dropdown-for-<?php echo $loop_ID;?>" data-dropdown data-hover="true" data-hover-pane="true" data-auto-focus="true" data-position="bottom" data-alignment="right" data-hover-delay="0" data-closing-time="0">
 													<ul class="menu">
 													<?php
 													foreach ($pages as $page):?>
-														<li<?php if( $page->ID ==  $current->ID):?> class="is-active-page"<?php endif;?>><a href="<?php echo get_permalink($page->ID);?>"><?php echo $page->post_title;?></a></li>
+														<li<?php if( $page->ID ==  $current->ID):?> class="is-active is-active-page"<?php endif;?>><a href="<?php echo get_permalink($page->ID);?>"><?php echo $page->post_title;?></a></li>
   													<?php endforeach;?>
 													</ul>
 												</div>
-		
+											</li>
 											<?php elseif ($parent->ID == $loop_ID):?>
-												<div><?php $title = get_the_title($parent->ID);  echo $title;?></div>
+												<li><span class="is-active is-active-page"><?php $title = get_the_title($parent->ID);  echo $title;?></span></li>
+											<?php elseif ($post->ID ==  $current->ID):?>
+												<li><span class="is-active is-active-page"><?php the_title();?></li>
 											<?php else:?>
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+												<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
 											<?php endif;?>
 										</div>
 			
@@ -134,7 +139,7 @@
 							<?php endif;?>
 						
 					</div>
-				</div>
+				</nav>
 			</div>
 		</div>
 	</div>
