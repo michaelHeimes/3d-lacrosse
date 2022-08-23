@@ -176,7 +176,17 @@
     
             });
         }
-    }    
+    }
+    
+    _app.team_dropdown = function() {
+        if( $('body').hasClass('page-template-page-roster') ) {
+            $('.top .right button').click(function(e){
+                e.preventDefault();
+                $(this).next('div').find('div').fadeToggle(200);
+                $(this).toggleClass('open');
+            });
+        }
+    }
             
     _app.init = function() {
         
@@ -189,6 +199,7 @@
         _app.display_on_load();
         _app.home_region_dropdown();
         _app.pros_slider();
+        _app.team_dropdown();
         _app.mobile_nav();
     }
     

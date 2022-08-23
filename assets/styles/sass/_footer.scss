@@ -31,11 +31,24 @@ footer#colophon {
 		}
 	}
 	
+	.left {
+		.bottom {
+			@include breakpoint(medium down) {
+				padding-bottom: 4.1rem;
+			}
+		}
+	}
+	
 	.right {
 		.top,
 		.bottom {
 			@include breakpoint(medium down) {
 				text-align: center;
+			}
+		}
+		.bottom {
+			@include breakpoint(medium down) {
+				padding-bottom: 3.1rem;
 			}
 		}
 	}

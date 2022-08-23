@@ -24,7 +24,7 @@
 				</div>
 				<?php endif;?>
 			</div>
-			<div class="right black-bg cell small-12 tablet-6 large-5">
+			<div class="right black-bg cell small-12 tablet-6 large-5 <?php if($layout == 'image-left'):?> tablet-offset-6 large-offset-5<?php endif;?>">
 				<?php if( !empty($image_copy_card['text']) ):?>
 				<div class="text-wrap black-bg">
 					<?php echo $image_copy_card['text'];?>

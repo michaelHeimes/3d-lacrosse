@@ -186,12 +186,18 @@
 						margin-top: 0;
 						top: 24px;
 						right: 0;
+						transition: transform .25s ease;
 					}
 					span {
 						transform: translateY(4px);
 						display: block;
 					}
 				}
+				
+			&.is-active a:before{
+				transform: rotateX(180deg);
+			}
+				
 			}
 		}
 		

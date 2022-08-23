@@ -1,5 +1,5 @@
 <header class="entry-header banner text-center black-bg relative">
-	<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/bp-banner-bg.svg);"></div>
+	<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/banner-bg.svg);"></div>
 	<div class="relative">
 		
 		<?php 		
@@ -23,7 +23,9 @@
 		
 		
 		if( !empty( $image ) ): ?>
+		<div class="banner-logo-wrap">
 			<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		</div>
 		<?php endif; ?>
 		
 		<h1>

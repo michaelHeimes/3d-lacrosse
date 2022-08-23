@@ -47,7 +47,7 @@ $image = get_field('logo');
 										</div>
 										<?php endif;?>
 									</div>
-									<div class="right black-bg cell small-12 tablet-6">
+									<div class="right black-bg cell small-12 tablet-6<?php if($layout == 'image-left'):?> tablet-offset-6 large-offset-6<?php endif;?>">
 										<?php if( !empty($image_copy_card2['text']) ):?>
 										<div class="text-wrap black-bg">
 											<?php echo $image_copy_card2['text'];?>
@@ -95,9 +95,13 @@ $image = get_field('logo');
 										</div>
 									</div>
 								</div>
+							</div>
+							<div class="lines-wrap relative">
+								<div class="lines"></div>
+							<div class="grid-container">
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
-										<div class="grid-x grid-padding-x align-center small-up-2 medium-up-3">
+										<div class="bio-cards grid-x grid-padding-x align-center small-up-2 medium-up-3">
 											<?php 
 												$bio_cards = get_field('bio_cards');
 												if( !empty($bio_cards) ):
@@ -116,10 +120,10 @@ $image = get_field('logo');
 													endforeach;
 												endif;
 											?>
-		
 										</div>
 									</div>
 								</div>
+							</div>
 							</div>
 						</section>
 					

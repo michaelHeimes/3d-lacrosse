@@ -1,6 +1,19 @@
 .team-card,
 .team-reveal {
 	
+	.photo-wrap {
+		position: relative;
+		padding: 0 20px;
+		margin-bottom: 1.78rem;
+		
+		svg {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		
+	}
+	
 	.img-wrap {
 		width: 147px;
 		height: 147px;
@@ -14,9 +27,21 @@
 			width: 100%;
 			object-fit: cover;
 		}
-		
+
 	}
 	
+	h3 {
+		margin-bottom: -2px;
+	}
+	
+	.btn-wrap {
+		padding-top: 0.25rem;
+	}
+	
+}
+
+.team-card {
+	margin-bottom: 2.5rem;
 }
 
 .team-reveal {
@@ -27,3 +52,4 @@
 		padding: 0 53px 66px;
 	}
 }
+

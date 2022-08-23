@@ -42,40 +42,42 @@ if($current->post_parent){
 										<h2><?php the_title();?></h2>
 									</div>
 									<div class="cell right small-12 tablet-9">
-										<button class="h3 black-bg grid-x grid-padding-x" data-toggle="dropdown-for-teams">
-											<div class="cell auto">Select a Team</div>
+										<button class="h3 black-bg grid-x grid-padding-x">
+											<div class="cell auto fh grid-x align-middle text-left">Select a Team</div>
 											<div class="shrink">
 												<svg xmlns="http://www.w3.org/2000/svg" width="15.679" height="9.253" viewBox="0 0 15.679 9.253">
-											  	<path id="Path_798" data-name="Path 798" d="M0,0,7.132,7.132,0,14.265" transform="translate(14.972 0.707) rotate(90)" fill="none" stroke="#fff" stroke-width="2"/>
+										  		<path id="Path_798" data-name="Path 798" d="M0,0,7.132,7.132,0,14.265" transform="translate(14.972 0.707) rotate(90)" fill="none" stroke="#fff" stroke-width="2"/>
 												</svg>
 											</div>
 										</button>
-										<div class="dropdown-pane" id="dropdown-for-teams" data-dropdown data-auto-focus="true" data-position="bottom" data-alignment="right" data-hover-delay="0" data-closing-time="0" data-close-on-click="true">
-											<ul class="menu">
-											<?php
-												$args = array(
-													'post_type'      => 'page',
-													'posts_per_page' => -1,
-													'post_parent'    => $parent->ID,
-													'post__not_in'   => array( get_the_ID() ),
-												);
+										<div class="dropdown-wrap relative">
+											<div style="display: none;">
+												<ul class="menu">
+												<?php
+													$args = array(
+														'post_type'      => 'page',
+														'posts_per_page' => -1,
+														'post_parent'    => $parent->ID,
+														'post__not_in'   => array( get_the_ID() ),
+													);
+													
+													$loop = new WP_Query( $args );
 												
-												$loop = new WP_Query( $args );
-											
-												if ( $loop->have_posts() ) : 
-													while ( $loop->have_posts() ) : $loop->the_post(); ?>
-											
-													<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php $title = get_the_title(); echo $title; ?></a></li>
-											
-												<?php endwhile; endif; wp_reset_postdata(); ?>
-											
-											<?php
-											foreach ($pages as $page):?>
-											
-												<li<?php if( $loop_ID ==  $post->ID):?> class="is-active-page"<?php endif;?>><a href="<?php echo get_permalink($page->ID);?>"><?php echo $page->post_title;?></a></li>
-											
-											  <?php endforeach;?>
-											</ul>
+													if ( $loop->have_posts() ) : 
+														while ( $loop->have_posts() ) : $loop->the_post(); ?>
+												
+														<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php $title = get_the_title(); echo $title; ?></a></li>
+												
+													<?php endwhile; endif; wp_reset_postdata(); ?>
+												
+												<?php
+												foreach ($pages as $page):?>
+												
+													<li<?php if( $loop_ID ==  $post->ID):?> class="is-active-page"<?php endif;?>><a href="<?php echo get_permalink($page->ID);?>"><?php echo $page->post_title;?></a></li>
+												
+											  	<?php endforeach;?>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>

@@ -1,15 +1,81 @@
 .page-nav {
+	padding: 0 3rem;
+	height: 100%;
+	max-width: 1054px;
+	min-height: 60px;
+	margin: auto;
+	position: relative;
+	background-color: $black;
+	border-radius: 30px;
+	
+	>.grid-x {
+		position: relative;
+		height: 100%;
+	}
+	
+	>img {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: none;
+		border-radius: 30px;
+	}
+	&:before {
+		content: '';
+		border-radius: 30px;
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.16);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: 100% auto;
+		// background-image: url(../images/page-nav-bg.png);
+		background-position: 0 50%;	
+	}
+	
 	a,
 	span,
 	button {
 		color: $white;
 		font-family: $font-jockey;
 		text-transform: uppercase;
+		position: relative;
+		padding: 1.2rem 0;
+		min-height: 60px;
+		min-width: 52px;
+		display: inline-block;
+		border-radius: 0;
+		line-height: 1.5;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 52px;
+			height: 11px;
+			background-color: transparent;
+		}
+		
+		&.is-active-parent:after {
+			background-color: $brand-blue;
+		}
+		
 	}
 	.dropdown-pane {
+		padding-bottom: 3rem;
 		li {
 			width: 100%;
-			text-align: left;
+			text-align: center;
+			
+		&.is-active-page a:after {
+			background-color: $brand-blue;
+		}
+			
 		}
 		a {
 			font-family: $body-font-family;
