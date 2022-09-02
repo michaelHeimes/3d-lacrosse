@@ -1,6 +1,31 @@
 .banner {
 	padding-bottom: 11.15rem;
 	margin-bottom: -7.5rem;
+	min-height: 40vw;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 20rem;
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: translateY(10rem);
+		background: #fff url(../images/lines.svg);
+		background-position: center;
+	}
+	
+&.no-pull {
+	margin-bottom: 0;
+}
+
+	.inner {
+		width: 100%;
+	}
+	
 	.banner-logo-wrap {
 		max-width: 188px;
 		margin: 0 auto 1rem;
@@ -10,5 +35,16 @@
 	}
 	h1 {
 		margin-bottom: 1.1rem;
+	}
+		
+}
+	
+.page-template-page-our-team {
+	.banner {
+		min-height: 570px;
+		margin-bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }

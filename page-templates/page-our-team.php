@@ -9,9 +9,6 @@
  
 get_header();
 $fields = get_fields();
-$page_id = get_the_ID();
-$region_title = get_the_title();
-$image = get_field('logo');
 ?>
 	<div class="content">
 		<div class="inner-content">
@@ -27,14 +24,14 @@ $image = get_field('logo');
 						<section class="our-team">
 							<div class="grid-container">
 								<div class="top grid-x grid-padding-x">
-									<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
+									<div class="cell small-12">
 										<div class="text-wrap text-center">
 											<?php echo $fields['ot_copy'];?>
 										</div>
 									</div>
 								</div>
 								<div class="grid-x grid-padding-x">
-									<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
+									<div class="cell small-12">
 										<div class="grid-x grid-padding-x align-center small-up-2 medium-up-3 large-up-4">
 											<?php 
 												$bio_cards = get_field('bio_cards');

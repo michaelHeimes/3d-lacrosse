@@ -43,16 +43,17 @@ $card_rows = $fields['card_rows'];
 								?>
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12">
-										<h3><?php echo $row_heading;?></h3>
+										<h3 class="row-heading"><?php echo $row_heading;?></h3>
 									</div>
 								</div>
 								<?php endif;?>
 								
 								<?php if ( !empty($row_cards) ):?>
-								<div class="row-cards grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3">
+								<div class="row-cards grid-x grid-padding-x small-up-2 medium-up-2 tablet-up-3">
 									<?php foreach($row_cards as $row_card):?>
-										<div class="cell">
-											<div class="inner grid-x grid-padding-x">
+									
+										<div class="cell single-alumni">
+											<div class="inner grid-x grid-padding-x align-middle">
 												<?php 
 												$image = $row_card['image'];
 												if( !empty( $image ) ): ?>
@@ -64,19 +65,21 @@ $card_rows = $fields['card_rows'];
 													<?php get_template_part('template-parts/icons-svgs/three-stripes');?>
 												</div>
 												<?php endif; ?>
-												<div class="right cell small-12 medium-auto">
+												<div class="right cell auto">
 													<h3 class="h4"><?php echo $row_card['name'];?></h3>
 													<p><?php echo $row_card['team'];?></p>
 													<p><?php echo $row_card['region'];?></p>
 												</div>
 											</div>
 										</div>
+										
 									<?php endforeach;?>
 								</div>
 								<?php endif;?>
 								<?php endforeach;?>
 								
 							</div>
+							<div class="lines"></div>
 						</section>
 						<?php endif;?>
 						

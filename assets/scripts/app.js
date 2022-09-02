@@ -151,7 +151,7 @@
                         
             $($toggleBtn).click(function(e){
                 e.preventDefault();
-                $(this).next('.grid-x').fadeToggle(200);
+                $(this).next('.page-nav-wrap').toggle();
                 $(this).toggleClass('open');
             });
             
@@ -165,7 +165,7 @@
                 }
                 
                 if ($(window).width() > 639) {
-                    
+                    $('.page-nav-wrap').show();
                 }
                 
             });
@@ -214,10 +214,31 @@
         if( $('body').hasClass('page-template-page-roster') ) {
             $('.top .right button').click(function(e){
                 e.preventDefault();
-                $(this).next('div').find('div').fadeToggle(200);
+                $(this).next('div').find('div').toggle();
                 $(this).toggleClass('open');
             });
         }
+    }
+    
+    _app.default_banner = function() {
+        if( $('body').hasClass('page-template-default') ) {
+            if( $('.entry-content module:first').hasClass('img-copy-card') ) {
+                
+            } else {
+                $('.banner').addClass('no-pull');
+            }
+        }
+    }
+    
+    _app.header_nav = function() {
+        const $header = $('header.site-header');
+        const $regionsDropdown = $('header.site-header #top-bar-menu .region-nav .menu.submenu.is-dropdown-submenu');
+        $(window).on('load resize', function() {
+            const $regionsDropdownHeight = $regionsDropdown.height();
+            if($regionsDropdownHeight > 120) {
+                $($header).css('padding-bottom', $regionsDropdownHeight * .5);
+            }
+        });
     }
             
     _app.init = function() {
@@ -234,6 +255,8 @@
         _app.pros_slider();
         _app.team_dropdown();
         _app.mobile_nav();
+        _app.default_banner();
+        _app.header_nav();
     }
     
     

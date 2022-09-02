@@ -20,28 +20,29 @@
 					</div>
 					<?php endif;?>
 					
-					<div class="grid-x grid-padding-x small-up-1<?php if ($cols >= 2):?> medium-up-2<?php endif; if ($cols >= 3):?> tablet-up-3<?php endif; if ($cols == 4):?> tablet-up-4<?php endif;?>">
-						<?php 
-							foreach($columns as $column):
-							$single_col = $column['column'];
-							$link = $single_col['button_link'];
-						?>
-						<div class="cell">
-							<div class="text-wrap">
-								<?php echo $single_col['copy'];?>
-							</div>
+					<div class="cell small-12">
+						<div class="grid-x grid-padding-x small-up-1<?php if ($cols >= 2):?> medium-up-2<?php endif; if ($cols >= 3):?> tablet-up-3<?php endif; if ($cols == 4):?> tablet-up-4<?php endif;?>">
 							<?php 
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-							<?php endif; ?>
-			
+								foreach($columns as $column):
+								$single_col = $column['column'];
+								$link = $single_col['button_link'];
+							?>
+							<div class="cell">
+								<div class="text-wrap">
+									<?php echo $single_col['copy'];?>
+								</div>
+								<?php 
+								if( $link ): 
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									?>
+									<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<?php endif; ?>
+				
+							</div>
+							<?php endforeach;?>
 						</div>
-						<?php endforeach;?>
-						
 					</div>
 				</div>
 			</div>

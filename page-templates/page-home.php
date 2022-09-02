@@ -136,7 +136,7 @@ $fields = get_fields();
 							</section>
 							<?php endif;?>
 							
-							<section class="img-copy-card type-quote img-left">
+							<section class="img-copy-card type-quote image-left">
 								<div class="grid-container">
 									<div class="grid-x grid-padding-x align-top">
 										<?php 

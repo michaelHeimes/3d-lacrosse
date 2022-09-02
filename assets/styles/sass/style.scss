@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "mixins";
 @import "variables";
 
 /*--------------------------------------------------------------
@@ -7,6 +6,7 @@
 --------------------------------------------------------------*/
 
 @import "foundation-settings";
+@import "mixins";
 @import "vendor/foundation/vendor/normalize";
 @import "vendor/foundation/foundation";
 
@@ -86,8 +86,11 @@
 @import "_modules/img-copy-card";
 @import "_modules/partners";
 @import "_modules/instagram-feed";
+@import "_modules/page-modules";
 
 @import "_pages/home";
 @import "_pages/region";
 @import "_pages/programming";
 @import "_pages/roster";
+@import "_pages/alumni";
+@import "_pages/our-team";

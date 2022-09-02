@@ -5005,7 +5005,7 @@ h3 {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
-  padding: 0.786em 2.833em;
+  padding: 0.97em 2.833em 0.6em;
   border: 1px solid transparent;
   border-radius: 23px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -5327,7 +5327,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   width: 200px;
   padding: 1rem;
   visibility: hidden;
-  border: 1px solid #AAAAAA;
+  border: 1px solid #000;
   border-radius: 0;
   background-color: #fff;
   font-size: 1rem;
@@ -8054,6 +8054,10 @@ button svg,
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
+button.chev-link,
+.button.chev-link {
+  padding: 0.7em 2.833em 0.65em;
+}
 button.chev-link:hover svg,
 .button.chev-link:hover svg {
   -webkit-transform: translateX(0.7em);
@@ -8089,6 +8093,15 @@ button.chev-link:hover svg,
 .reveal.team-reveal {
   -webkit-box-shadow: 6px 0px 20px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 6px 0px 20px 0px rgba(0, 0, 0, 0.16);
+  color: #707070;
+}
+.reveal.team-reveal p {
+  color: #707070;
+  font-size: rem-clac(16);
+  line-height: rem-clac(26);
+}
+.reveal.team-reveal button {
+  padding: 0.86rem;
 }
 
 .color-white {
@@ -8133,6 +8146,7 @@ svg {
   left: 0;
   right: 0;
   bottom: 0;
+  background-repeat: no-repeat;
 }
 
 /*********************
@@ -8197,7 +8211,7 @@ POSTS & CONTENT STYLES
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
-  padding: 0.786em 2.833em;
+  padding: 0.97em 2.833em 0.6em;
   border: 1px solid transparent;
   border-radius: 23px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -8642,6 +8656,7 @@ h3,
 }
 
 header.site-header {
+  background-color: #000;
   position: relative;
   z-index: 555;
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -8737,6 +8752,9 @@ header.site-header #top-bar-menu #main-nav > li.is-active span:before,
 header.site-header #top-bar-menu #main-nav > li.current-menu-ancestor span:before {
   background-color: #019FDB;
 }
+header.site-header #top-bar-menu ul#main-nav {
+  margin-right: -0.8rem;
+}
 header.site-header #top-bar-menu .region-nav {
   position: static;
 }
@@ -8747,6 +8765,8 @@ header.site-header #top-bar-menu .region-nav .menu.submenu.is-dropdown-submenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -9074,14 +9094,27 @@ footer#colophon .copyright {
   left: 0;
   bottom: 0;
 }
+@media print, screen and (max-width: 39.99875em) {
+  .team-card .photo-wrap svg,
+.team-reveal .photo-wrap svg {
+    max-width: 52px;
+  }
+}
 .team-card .img-wrap,
 .team-reveal .img-wrap {
-  width: 147px;
-  height: 147px;
+  width: 106px;
+  height: 106px;
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.16);
+}
+@media print, screen and (min-width: 40em) {
+  .team-card .img-wrap,
+.team-reveal .img-wrap {
+    width: 147px;
+    height: 147px;
+  }
 }
 .team-card .img-wrap img,
 .team-reveal .img-wrap img {
@@ -9094,6 +9127,12 @@ footer#colophon .copyright {
 .team-card h3,
 .team-reveal h3 {
   margin-bottom: -2px;
+  letter-spacing: 0.1em;
+}
+.team-card h4,
+.team-reveal h4 {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: bold;
 }
 .team-card .btn-wrap,
 .team-reveal .btn-wrap {
@@ -9101,7 +9140,12 @@ footer#colophon .copyright {
 }
 
 .team-card {
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+@media print, screen and (min-width: 40em) {
+  .team-card {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .team-reveal .photo-title {
@@ -9114,6 +9158,28 @@ footer#colophon .copyright {
 .banner {
   padding-bottom: 11.15rem;
   margin-bottom: -7.5rem;
+  min-height: 40vw;
+}
+.banner:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 20rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
+  background: #fff url(../images/lines.svg);
+  background-position: center;
+}
+.banner.no-pull {
+  margin-bottom: 0;
+}
+.banner .inner {
+  width: 100%;
 }
 .banner .banner-logo-wrap {
   max-width: 188px;
@@ -9124,6 +9190,20 @@ footer#colophon .copyright {
 }
 .banner h1 {
   margin-bottom: 1.1rem;
+}
+
+.page-template-page-our-team .banner {
+  min-height: 570px;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .child-sibling-links {
@@ -9145,17 +9225,17 @@ footer#colophon .copyright {
     padding: 0 3rem;
   }
 }
-.page-nav > .grid-x {
+.page-nav > .page-nav-wrap {
   position: relative;
   height: 100%;
 }
 @media print, screen and (max-width: 39.99875em) {
-  .page-nav > .grid-x {
+  .page-nav > .page-nav-wrap {
     position: absolute;
     z-index: 2;
     top: 62px;
-    left: 1rem;
-    right: 1rem;
+    left: 0;
+    right: 0;
     height: auto;
     background-color: #000;
     border-radius: 0 0 30px 30px;
@@ -9163,7 +9243,7 @@ footer#colophon .copyright {
   }
 }
 @media print, screen and (min-width: 40em) {
-  .page-nav > .grid-x {
+  .page-nav > .page-nav-wrap > .grid-x {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -9256,6 +9336,11 @@ footer#colophon .copyright {
 .page-nav .dropdown-pane {
   padding-bottom: 3rem;
 }
+@media print, screen and (max-width: 39.99875em) {
+  .page-nav .dropdown-pane {
+    width: 100%;
+  }
+}
 .page-nav .dropdown-pane li {
   width: 100%;
   text-align: center;
@@ -9266,11 +9351,13 @@ footer#colophon .copyright {
 .page-nav .dropdown-pane a {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   color: #000;
+  font-size: 1.125rem;
 }
 
 .img-copy-card {
   position: relative;
   padding-bottom: 7.9rem;
+  overflow: hidden;
 }
 @media print, screen and (min-width: 56.25em) {
   .img-copy-card .inner {
@@ -9296,26 +9383,13 @@ footer#colophon .copyright {
 .img-copy-card .left {
   position: relative;
   z-index: 2;
-  right: -1rem;
-}
-@media print, screen and (max-width: 56.24875em) {
-  .img-copy-card .left {
-    margin-bottom: -7rem;
-  }
-}
-@media print, screen and (min-width: 56.25em) {
-  .img-copy-card .left {
-    position: absolute;
-    right: -1rem;
-    padding-bottom: 4rem;
-  }
 }
 .img-copy-card .left .img-wrap {
   position: relative;
 }
-@media print, screen and (min-width: 64em) {
+@media print, screen and (max-width: 56.24875em) {
   .img-copy-card .left .img-wrap {
-    margin-left: -3%;
+    max-width: 700px;
   }
 }
 .img-copy-card .left .img-wrap img {
@@ -9350,19 +9424,6 @@ footer#colophon .copyright {
     -webkit-transform: translateY(52px);
             transform: translateY(52px);
   }
-}
-@media print, screen and (min-width: 64em) {
-  .img-copy-card .right .text-wrap {
-    padding-right: 3%;
-  }
-}
-.img-copy-card .right svg.thin-stripes {
-  position: absolute;
-  left: 100%;
-  right: 0;
-  bottom: 0;
-}
-@media print, screen and (min-width: 56.25em) {
   .img-copy-card .right:after {
     content: "";
     position: absolute;
@@ -9371,12 +9432,17 @@ footer#colophon .copyright {
     right: 0;
     bottom: 0;
     left: -71px;
-    right: -71px;
+    right: -8.25rem;
     background-color: #000;
     z-index: -1;
   }
 }
+.img-copy-card .right .text-btns-svg-wrap {
+  position: relative;
+}
 .img-copy-card .right .btns-wrap {
+  position: relative;
+  z-index: 1;
   padding-top: 1.25rem;
 }
 @media print, screen and (min-width: 40em) {
@@ -9385,13 +9451,81 @@ footer#colophon .copyright {
   }
 }
 .img-copy-card.image-left .left {
-  right: auto;
-  left: -1rem;
+  padding-left: 0;
+}
+.img-copy-card.image-left .left .img-wrap {
+  position: relative;
+}
+@media (min-width: 75rem) {
+  .img-copy-card.image-left .left .img-wrap {
+    margin-left: calc((100vw - 75rem) * -0.5 - 1rem);
+  }
+}
+@media screen and (min-width: 90em) {
+  .img-copy-card.image-left .left .img-wrap {
+    margin-left: -8.25rem;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .img-copy-card.image-left .text-btns-wrap {
+    padding-left: 5%;
+  }
+}
+.img-copy-card.image-left svg.thin-stripes {
+  position: absolute;
+  right: -1rem;
+  bottom: 0;
+}
+@media print, screen and (min-width: 56.25em) {
+  .img-copy-card.image-left svg.thin-stripes {
+    left: -10rem;
+    right: auto;
+  }
+}
+.img-copy-card.image-right .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 0;
+}
+@media (min-width: 75rem) {
+  .img-copy-card.image-right .left .img-wrap {
+    margin-right: calc((100vw - 75rem) * -0.5 - 1rem);
+  }
+}
+@media screen and (min-width: 90em) {
+  .img-copy-card.image-right .left .img-wrap {
+    margin-right: -8.25rem;
+  }
 }
 @media print, screen and (max-width: 56.24875em) {
-  .img-copy-card.image-left .left {
-    right: auto;
-    left: -1rem;
+  .img-copy-card.image-right .left {
+    margin-bottom: -7rem;
+  }
+}
+@media print, screen and (min-width: 56.25em) {
+  .img-copy-card.image-right .right:after {
+    right: -71px;
+    left: -8.25rem;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .img-copy-card.image-right .right .text-btns-wrap {
+    padding-right: 5%;
+  }
+}
+.img-copy-card.image-right svg.thin-stripes {
+  position: absolute;
+  right: -1rem;
+  bottom: 0;
+}
+@media print, screen and (min-width: 56.25em) {
+  .img-copy-card.image-right svg.thin-stripes {
+    left: auto;
+    right: -10rem;
   }
 }
 @media print, screen and (max-width: 56.24875em) {
@@ -9410,6 +9544,16 @@ footer#colophon .copyright {
     height: 50%;
     bottom: 0;
     background-color: #000;
+  }
+}
+@media print and (min-width: 75rem), screen and (max-width: 56.24875em) and (min-width: 75rem) {
+  .img-copy-card.type-quote .left .img-wrap:before {
+    margin-left: calc((100vw - 75rem) * -0.5 - 1rem);
+  }
+}
+@media screen and (max-width: 56.24875em) and (min-width: 90em) {
+  .img-copy-card.type-quote .left .img-wrap:before {
+    margin-left: -8.25rem;
   }
 }
 .img-copy-card.type-quote .right .text-wrap {
@@ -9475,6 +9619,26 @@ footer#colophon .copyright {
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 160, 221) 20%);
 }
 
+.module.text {
+  margin-top: 6.5rem;
+  margin-bottom: 5.6rem;
+}
+.module.graphical-callout {
+  background-size: cover;
+  background-position: center;
+}
+.module.graphical-callout .cell {
+  min-height: 397px;
+  padding-top: 3rem;
+  padding-block: 3rem;
+}
+.module .btn-wrap {
+  padding-top: 1.8rem;
+}
+.module .btn-wrap .button {
+  margin-bottom: 0;
+}
+
 .page-template-page-home .home-banner {
   background-color: #000;
   position: relative;
@@ -9499,6 +9663,7 @@ footer#colophon .copyright {
 }
 .page-template-page-home .hero-bottom {
   position: relative;
+  min-height: 54vw;
 }
 .page-template-page-home .hero-bottom .bg {
   position: absolute;
@@ -9869,25 +10034,13 @@ footer#colophon .copyright {
   margin-bottom: 0;
   position: relative;
 }
-.page-template-page-roster .banner:before, .page-template-page-roster .banner:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
+.page-template-page-roster .top .left h2 {
+  margin-bottom: 2.7rem;
 }
-.page-template-page-roster .banner:before {
-  height: 11.15rem;
-  bottom: 0;
-  background-color: #fff;
-}
-.page-template-page-roster .banner:after {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 400px;
-  background-image: url(../images/lines.svg);
-  background-position: center;
+@media print, screen and (max-width: 56.24875em) {
+  .page-template-page-roster .top .left h2 {
+    text-align: center;
+  }
 }
 .page-template-page-roster .top .right button {
   border-radius: 0;
@@ -9919,5 +10072,216 @@ footer#colophon .copyright {
 .page-template-page-roster .top .right .dropdown-wrap > div ul li a {
   color: #000;
   font-size: 1.25rem;
+}
+.page-template-page-roster .entry-content {
+  position: relative;
+  padding-top: 3.85rem;
+  padding-bottom: 6.45rem;
+}
+.page-template-page-roster .entry-content .left {
+  padding-top: 1.85rem;
+}
+.page-template-page-roster .entry-content .left .mobile-heading-wrap {
+  padding-top: 1.05rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 2.2rem;
+  border-bottom: 1px solid #ddd;
+}
+.page-template-page-roster .entry-content .left .mobile-heading-wrap h2 {
+  letter-spacing: 0.001rem;
+}
+@media print, screen and (max-width: 39.99875em) {
+  .page-template-page-roster .entry-content .left .mobile-heading-wrap h2 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+.page-template-page-roster .entry-content .coach {
+  padding-bottom: 2.15rem;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-roster .entry-content .coach {
+    padding-bottom: 3.15rem;
+  }
+}
+.page-template-page-roster .entry-content .coach:first-child {
+  margin-top: 2.5rem;
+}
+.page-template-page-roster .entry-content .coach h3,
+.page-template-page-roster .entry-content .coach p {
+  margin: 0;
+}
+.page-template-page-roster .entry-content .coach h3 {
+  text-transform: none;
+}
+.page-template-page-roster .entry-content .table-wrap {
+  padding: 0;
+  border: 0;
+}
+.page-template-page-roster .entry-content .table-wrap table.tablepress {
+  border-color: #000;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.6px;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-roster .entry-content .table-wrap table.tablepress {
+    font-size: 1.3125rem;
+    line-height: 1.5625rem;
+  }
+}
+.page-template-page-roster .entry-content .table-wrap table.tablepress thead {
+  border-left: 0;
+  border-right: 0;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-roster .entry-content .table-wrap table.tablepress thead {
+    font-size: 1.6875rem;
+    line-height: 2.375rem;
+    letter-spacing: 2.7px;
+  }
+}
+.page-template-page-roster .entry-content .table-wrap table.tablepress thead th {
+  padding: 0.7rem 0.7rem 0.25rem 0.07rem;
+  font-weight: bold;
+  font-family: "Jockey One", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 2.7px;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-roster .entry-content .table-wrap table.tablepress thead th {
+    padding: 4.15rem 1.15rem 0.85rem;
+  }
+}
+.page-template-page-roster .entry-content .table-wrap table.tablepress tbody td {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  padding: 1.4rem 0.7rem 1rem 0.07rem;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-roster .entry-content .table-wrap table.tablepress tbody td {
+    font-size: 1.3125rem;
+    line-height: 1.5625rem;
+    padding: 3.2rem 1.07rem 1.4rem;
+  }
+}
+
+.page-template-page-alumni .entry-content {
+  padding-bottom: 2.5rem;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-alumni .entry-content {
+    padding-bottom: 6.5rem;
+  }
+}
+.page-template-page-alumni h2 {
+  margin-bottom: 1.95rem;
+}
+@media print, screen and (max-width: 56.24875em) {
+  .page-template-page-alumni h2 {
+    margin-bottom: 4.75rem;
+    text-align: center;
+  }
+}
+.page-template-page-alumni .card-rows {
+  position: relative;
+}
+.page-template-page-alumni .card-rows .lines {
+  bottom: -5rem;
+}
+.page-template-page-alumni .card-rows h3 {
+  font-family: "Jockey One", sans-serif;
+  font-weight: 400;
+}
+.page-template-page-alumni .card-rows h3.row-heading {
+  color: #AAAAAA;
+  letter-spacing: 1.5px;
+  margin-bottom: 3rem;
+}
+.page-template-page-alumni .card-rows .row-cards {
+  padding-bottom: 3.3rem;
+}
+.page-template-page-alumni .card-rows .row-cards .single-alumni {
+  margin-bottom: 2.62rem;
+}
+.page-template-page-alumni .card-rows .row-cards .single-alumni .right {
+  padding-left: 0;
+}
+.page-template-page-alumni .card-rows .row-cards .single-alumni .image-wrap {
+  position: relative;
+}
+.page-template-page-alumni .card-rows .row-cards .single-alumni .image-wrap .circle {
+  max-width: 58px;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-alumni .card-rows .row-cards .single-alumni .image-wrap .circle {
+    max-width: 129px;
+  }
+}
+.page-template-page-alumni .card-rows .row-cards .single-alumni .image-wrap svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media print, screen and (max-width: 39.99875em) {
+  .page-template-page-alumni .card-rows .row-cards .single-alumni .image-wrap svg {
+    max-width: 35px;
+  }
+}
+.page-template-page-alumni .card-rows .row-cards .single-alumni h3 {
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  margin-bottom: 0.2rem;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-alumni .card-rows .row-cards .single-alumni h3 {
+    font-size: 2rem;
+    line-height: 2.3125rem;
+  }
+}
+.page-template-page-alumni .card-rows .row-cards .single-alumni p {
+  margin: 0;
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-alumni .card-rows .row-cards .single-alumni p {
+    font-size: 1.5rem;
+    line-height: 2.3125rem;
+  }
+}
+.page-template-page-alumni .card-rows .table-wrap {
+  padding: 0;
+  border: 0;
+}
+.page-template-page-alumni .card-rows .table-wrap table.tablepress {
+  border-color: #000;
+}
+@media print, screen and (min-width: 40em) {
+  .page-template-page-alumni .card-rows .table-wrap table.tablepress {
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+  }
+}
+.page-template-page-alumni .card-rows .table-wrap table.tablepress thead {
+  border-left: 0;
+  border-right: 0;
+}
+.page-template-page-alumni .card-rows .table-wrap table.tablepress thead th {
+  padding: 4.15rem 1.15rem 1rem;
+  font-weight: bold;
+  font-family: "Jockey One", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 2.7px;
+}
+.page-template-page-alumni .card-rows .table-wrap table.tablepress tbody td {
+  padding: 2.4rem 1.07rem 0.95rem;
+}
+
+.page-template-page-our-team .entry-content {
+  padding-top: 3.6rem;
+  padding-bottom: 2.75rem;
 }
 /*# sourceMappingURL=style.min.css.map */

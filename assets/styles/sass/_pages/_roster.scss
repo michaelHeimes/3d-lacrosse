@@ -2,29 +2,16 @@
 	.banner {
 		margin-bottom: 0;
 		position: relative;
-		&:before,
-		&:after {
-			content: '';
-			position: absolute;
-			width: 100%;
-			left: 0;
-			right: 0;
-		}
-		&:before {
-			height: 11.15rem;
-			bottom: 0;
-			background-color: $white;
-		}
-		&:after {
-			position: absolute;
-			z-index: -1;
-			width: 100%;
-			height: 400px;
-			background-image: url(../images/lines.svg);
-			background-position: center;
-		}
 	}
 	.top {
+		.left {
+			h2 {
+				margin-bottom: 2.7rem;
+				@include breakpoint(medium down) {
+					text-align: center;
+				}
+			}
+		}
 		.right {
 			button {
 				border-radius: 0;
@@ -67,6 +54,84 @@
 		}
 	}
 	.entry-content {
-
+		position: relative;
+		padding-top: 3.85rem;
+		padding-bottom: 6.45rem;
+		.left {
+			padding-top: 1.85rem;
+			.mobile-heading-wrap {
+				padding-top: 1.05rem;
+				padding-bottom: 0.2rem;
+				margin-bottom: 2.2rem;
+				border-bottom: 1px solid #ddd;
+				h2 {
+					letter-spacing: .001rem;
+					@include breakpoint(small down) {
+					font-size: rem-calc(14);
+					line-height: rem-calc(16);
+					}
+				}
+			}
+		}
+		.coach {
+			padding-bottom: 2.15rem;
+			@include breakpoint(medium) {
+				padding-bottom: 3.15rem;
+			}
+		&:first-child{
+			margin-top: 2.5rem;
+		}
+			h3,
+			p {
+				margin: 0;
+			}
+			h3 {
+				text-transform: none;
+			}
+		}
+		.table-wrap {
+			padding: 0;
+			border: 0;
+			table.tablepress {
+				border-color: $black;
+				font-size: rem-calc(12);
+				line-height: rem-calc(12);
+				letter-spacing: 0.6px;
+				@include breakpoint(medium) {
+					font-size: rem-calc(21);
+					line-height: rem-calc(25);
+				}
+				thead {
+					@include breakpoint(medium) {
+						font-size: rem-calc(27);
+						line-height: rem-calc(38);
+						letter-spacing: 2.7px;
+					}
+					border-left: 0;
+					border-right: 0;
+					th {
+						padding: 0.7rem 0.7rem 0.25rem .07rem;
+						font-weight: bold;
+						font-family: $font-jockey;
+						text-transform: uppercase;
+						color: $black;
+						letter-spacing: 2.7px;
+						@include breakpoint(medium) {
+							padding: 4.15rem 1.15rem .85rem;
+						}
+					}
+				}
+				tbody td {
+					font-size: rem-calc(12);
+					line-height: rem-calc(12);
+					padding: 1.4rem .7rem 1rem .07rem;
+					@include breakpoint(medium) {
+						font-size: rem-calc(21);
+						line-height: rem-calc(25);
+						padding: 3.2rem 1.07rem 1.4rem;
+					}
+				}
+			}
+		}
 	}
 }

@@ -83,6 +83,9 @@ if($current->post_parent){
 								</div>
 								<div class="grid-x grid-padding-x">
 									<div class="left cell small-12 tablet-3">
+										<div class="mobile-heading-wrap hide-for-tablet">
+											<h2>Coaches</h2>
+										</div>
 										<?php 
 											if( $coaches = $fields['coaches'] ):
 											foreach($coaches as $coach):

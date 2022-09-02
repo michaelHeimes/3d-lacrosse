@@ -49,6 +49,7 @@ button,
 	}
 	
 &.chev-link {
+	padding: 0.7em 2.833em 0.65em;
 	&:hover {
 		svg {
 			transform: translateX(.7em);
@@ -86,6 +87,15 @@ button,
 
 .reveal.team-reveal {
 	box-shadow: 6px 0px 20px 0px rgba(0,0,0,0.16);
+	color: #707070;
+	p {
+		color: #707070;
+		font-size: rem-clac(16);
+		line-height: rem-clac(26);
+	}
+	button {
+		padding: 0.86rem;
+	}
 }
 
 .color-white {
@@ -136,6 +146,7 @@ svg {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	background-repeat: no-repeat;
 }
 
 /*********************

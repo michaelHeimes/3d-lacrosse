@@ -7,15 +7,19 @@
 <section<?php if( !empty($unique_id) ):?> id="<?php echo slugify($unique_id);?>"<?php endif;?> class="module graphical-callout" style="background-image: url(<?php echo esc_url($background_image['url']);?>);">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x text-center">
-			<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
-				<div class="text-wrap"><?php echo $copy;?></div>
+			<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2 grid-x flex-dir-column align-middle align-center">
+				<div class="text-wrap color-white"><?php echo $copy;?></div>
 				<?php 
 				if( $link ): 
 					$link_url = $link['url'];
 					$link_title = $link['title'];
 					$link_target = $link['target'] ? $link['target'] : '_self';
 					?>
-					<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+				<div class="btn-wrap">
+					<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+						<span><?php echo esc_html( $link_title ); ?></span>
+					</a>
+				</div>
 				<?php endif; ?>
 			</div>
 		</div>

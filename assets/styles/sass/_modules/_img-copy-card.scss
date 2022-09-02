@@ -1,6 +1,7 @@
 .img-copy-card  {
 	position: relative;
 	padding-bottom: 7.9rem;
+	overflow: hidden;
 	.inner {
 		@include breakpoint(tablet) {
 			justify-content: flex-end;
@@ -23,27 +24,14 @@
 	.left {
 		position: relative;
 		z-index: 2;
-		right: -1rem;
 		
-		@include breakpoint(medium down) {
-			margin-bottom: -7rem;
-		}
-		
-		@include breakpoint(tablet) {
-			position: absolute;
-			right: -1rem;
-			padding-bottom: 4rem;
-		}
-		
-		.img-wrap {
-			position: relative;
-			
-			@include breakpoint(large) {
-				margin-left: -3%;
+		.img-wrap {		
+			position: relative;	
+			@include breakpoint(medium down) {
+				max-width: 700px;
 			}
-			
 			img {
-				display: block
+				display: block;
 			}
 			
 		&:after {
@@ -69,33 +57,24 @@
 				
 			@include breakpoint(tablet) {
 				transform: translateY(52px);
+
+				&:after {
+					content: '';
+					@include absolute-cover;
+					left: -71px;
+					right: -8.25rem;
+					background-color: $black;
+					z-index: -1;
+				}
 			}
 			
-		.text-wrap {
-			@include breakpoint(large) {
-				padding-right: 3%;
-			}
+		.text-btns-svg-wrap {
+			position: relative;
 		}
-		
-		svg.thin-stripes {
-			position: absolute;
-			left: 100%;
-			right: 0;
-			bottom: 0;
-		}
-		
-		@include breakpoint(tablet) {
-			&:after {
-				content: '';
-				@include absolute-cover;
-				left: -71px;
-				right: -71px;
-				background-color: $black;
-				z-index: -1;
-			}
-		}
-		
+			
 		.btns-wrap {
+			position: relative;
+			z-index: 1;
 			padding-top: 1.25rem;
 			@include breakpoint(medium) {
 				padding-top: 2.15rem;
@@ -103,17 +82,77 @@
 		}
 		
 	}
-	
 &.image-left {
 	.left {
-		right: auto;
-		left: -1rem;
+		padding-left: 0;
+		.img-wrap {
+			position: relative;
+			@include flush-left;
+		}
 		@include breakpoint(medium down) {
+
+		}
+	}
+	.text-btns-wrap {
+		@include breakpoint(large) {
+			padding-left: 5%;
+		}
+	}
+		
+	svg.thin-stripes {
+		position: absolute;
+		right: -1rem;
+		bottom: 0;
+		@include breakpoint(tablet) {
+			left: -10rem;
 			right: auto;
-			left: -1rem;
+	
 		}
 	}
 }
+
+&.image-right {
+	.left {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 0;
+		.img-wrap {
+			@include flush-right;
+		}
+		@include breakpoint(medium down) {
+			margin-bottom: -7rem;
+		}
+		
+		@include breakpoint(tablet) {
+			
+		}
+	
+	}
+	.right {
+		@include breakpoint(tablet) {
+			&:after {
+				right: -71px;
+				left: -8.25rem;
+			}
+		}
+		.text-btns-wrap {
+			@include breakpoint(large) {
+				padding-right: 5%;
+			}
+		}
+	}
+	svg.thin-stripes {
+		position: absolute;
+		right: -1rem;
+		bottom: 0;
+		@include breakpoint(tablet) {
+			left: auto;
+			right: -10rem;
+	
+		}
+	}
+}	
+
 	
 &.type-quote {
 	.left {
@@ -130,6 +169,7 @@
 					height: 50%;
 					bottom: 0;
 					background-color: $black;
+					@include flush-left;
 				}
 			}
 		}

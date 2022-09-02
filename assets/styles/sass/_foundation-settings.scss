@@ -296,7 +296,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 
 $button-font-family: inherit;
 $button-font-weight: null;
-$button-padding: 0.786em 2.833em;
+$button-padding: 0.97em 2.833em 0.6em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -397,7 +397,7 @@ $drilldown-arrow-size: 6px;
 
 $dropdown-padding: 1rem;
 $dropdown-background: $white;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-border: 1px solid $black;
 $dropdown-font-size: 1rem;
 $dropdown-width: 200px;
 $dropdown-radius: 0;

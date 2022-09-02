@@ -1,0 +1,100 @@
+.page-template-page-alumni {
+	.entry-content {
+		padding-bottom: 2.5rem;
+		@include breakpoint(medium) {
+			padding-bottom: 6.5rem;
+		}
+	}
+	h2 {
+		margin-bottom: 1.95rem;
+		@include breakpoint(medium down) {
+			margin-bottom: 4.75rem;
+			text-align: center;
+		}
+	}
+	.card-rows {
+		position: relative;
+		.lines {
+			bottom: -5rem;
+		}
+		h3 {
+			font-family: $font-jockey;
+			font-weight: 400;
+		}
+		h3.row-heading {
+			color: $medium-gray;
+			letter-spacing: 1.5px;
+			margin-bottom: 3rem;
+		}
+		.row-cards {
+			padding-bottom: 3.3rem;
+			.single-alumni {
+				margin-bottom: 2.62rem;
+				.right {
+					padding-left: 0;
+				}
+				.image-wrap {
+					position: relative;
+					.circle {
+						max-width: 58px;
+						@include breakpoint(medium) {
+							max-width: 129px;
+						}
+					}
+					svg {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						@include breakpoint(small down) {
+							max-width: 35px;
+						}
+					}
+				}
+				h3 {
+					font-size: rem-calc(13);
+					line-height: rem-calc(15);
+					margin-bottom: 0.2rem;
+					@include breakpoint(medium) {
+						font-size: rem-calc(32);
+						line-height: rem-calc(37);
+					}
+				}
+				p {
+					margin: 0;
+					font-size: rem-calc(10);
+					line-height: rem-calc(15);
+					@include breakpoint(medium) {
+						font-size: rem-calc(24);
+						line-height: rem-calc(37);
+					}
+				}
+			}
+		}
+		.table-wrap {
+			padding: 0;
+			border: 0;
+			table.tablepress {
+				border-color: $black;
+				@include breakpoint(medium) {
+					font-size: rem-calc(25);
+					line-height: rem-calc(30);
+				}
+				thead {
+					border-left: 0;
+					border-right: 0;
+					th {
+						padding: 4.15rem 1.15rem 1rem;
+						font-weight: bold;
+						font-family: $font-jockey;
+						text-transform: uppercase;
+						color: $black;
+						letter-spacing: 2.7px;
+					}
+				}
+				tbody td {
+					padding: 2.4rem 1.07rem 0.95rem;
+				}
+			}
+		}
+	}
+}

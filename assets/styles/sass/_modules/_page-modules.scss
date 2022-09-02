@@ -1,0 +1,21 @@
+.module {
+	&.text {
+		margin-top: 6.5rem;
+		margin-bottom: 5.6rem;
+	}
+	&.graphical-callout {
+		background-size: cover;
+		background-position: center;
+		.cell {
+			min-height: 397px;
+			padding-top: 3rem;
+			padding-block: 3rem;
+		}
+	}
+	.btn-wrap {
+		padding-top: 1.8rem;
+		.button {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,6 +1,6 @@
-<header class="entry-header banner text-center black-bg relative">
+<header class="entry-header banner text-center black-bg color-white relative grid-x align-middle align-center">
 	<div class="bg" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/images/banner-bg.svg);"></div>
-	<div class="relative">
+	<div class="inner relative">
 		
 		<?php 		
 		global $post;
@@ -42,7 +42,11 @@
 			?>
 		</h1>
 		
-		<?php get_template_part('template-parts/nav-banner-nav');?>
+		<?php 
+			if( !is_page_template('page-templates/page-our-team.php') ) {
+				get_template_part('template-parts/nav-banner-nav');
+			}
+		?>
 	</div>
 	
 </header><!-- .entry-header -->

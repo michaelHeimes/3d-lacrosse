@@ -22,6 +22,7 @@
 	
 	.hero-bottom {
 		position: relative;
+		min-height: 54vw;
 		.bg {
 			@include absolute-cover;
 			top: -17rem;
