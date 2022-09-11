@@ -3,19 +3,21 @@
 	margin-bottom: -7.5rem;
 	min-height: 40vw;
 	
-	&:before {
-		content: '';
-		position: absolute;
-		z-index: 0;
-		width: 100%;
-		height: 20rem;
-		width: 100%;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		transform: translateY(10rem);
-		background: #fff url(../images/lines.svg);
-		background-position: center;
+	@include breakpoint(tablet) {
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			width: 100%;
+			height: 20rem;
+			width: 100%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: translateY(10rem);
+			background: #fff url(../images/lines.svg);
+			background-position: center;
+		}
 	}
 	
 &.no-pull {
@@ -27,8 +29,11 @@
 	}
 	
 	.banner-logo-wrap {
-		max-width: 188px;
+		max-width: 138px;
 		margin: 0 auto 1rem;
+		@include breakpoint(medium) {
+			max-width: 188px;
+		}
 		img {
 			width: 100%;
 		}

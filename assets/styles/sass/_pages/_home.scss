@@ -7,8 +7,8 @@
 			color: $white;
 			position: absolute;
 			z-index: 1;
-			left: 0;
-			right: 0;
+			left: -2rem;
+			right: -2rem;
 			top: 50%;
 			transform: translateY(-50%);
 			h1 {
@@ -18,13 +18,24 @@
 				}
 			}
 		}
+		img {
+			display: block;
+			margin: -1px auto 0;
+			@include breakpoint(medium) {
+				margin: -1px auto -7rem;
+			}
+		}
 	}
 	
 	.hero-bottom {
 		position: relative;
 		min-height: 54vw;
+		@include breakpoint(tablet) {
+			padding-bottom: 10rem;
+		}
 		.bg {
 			@include absolute-cover;
+			right: -2rem;
 			top: -17rem;
 			background-position: -200% 0%;
 			@include breakpoint(tablet) {
@@ -36,6 +47,46 @@
 			padding-bottom: 3rem;
 			margin-left: -1rem;
 		}
+		.img-copy-card {
+			position: relative;
+			overflow: visible;
+			padding-bottom: 5rem;
+			.right {
+				@include breakpoint(medium down) {
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 100%;
+						height: 19rem;
+						background: url(../images/header-bg-top.svg);
+						background-repeat: no-repeat;
+						background-position: 100% 50%;
+						background-size: cover;
+					}
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 100%;
+						height: 4rem;
+						background: url(../images/header-bg-bottom.svg);
+						background-repeat: no-repeat;
+						background-position: 50% 100%;
+						background-size: cover;
+					}
+				}
+				svg.thin-stripes {
+					@include breakpoint(medium down) {
+						bottom: -2rem;
+						z-index: 1;
+					}
+				}
+			}
+		}
 	}
 	
 	.img-copy-card {
@@ -45,7 +96,7 @@
 	
 	.find-region {
 		padding-top: 17px;
-		margin-top: 4.7rem;
+		margin-top: 0;
 		border-left: 17px solid #000B0F;
 		border-right: 17px solid #000B0F;
 		h2 {
@@ -105,16 +156,28 @@
 					
 						a {
 							display: block;
+							position: relative;
 							height: 100%;
 							padding: 1rem 0.9rem 0rem;
 							border-radius: 5px;
-							transition: all .3s ease;
 							box-shadow: 0px 0px 0px 0px $medium-gray;
 							color: $medium-gray;
+							border: 1px solid transparent;
+							transition: all .3s ease;
+						&:before {
+							content: '';
+							display: block;
+							border-bottom: 1px solid #DDDDDD;
+							position: absolute;
+							bottom: 0;
+							width: calc(100% - 1.8rem);
+							transition: border .3s ease;
+						}
 						&:hover {
 							box-shadow: 0px 0px 10px 0px $medium-gray;
 							color: $black;
-							span.title {
+							border: 1px solid #EFEFEF;
+							&:before {
 								border-bottom: 1px solid transparent;
 							}
 						}
@@ -133,8 +196,6 @@
 								text-transform: uppercase;
 								padding-top: 0.8rem;
 								padding-bottom: 0.7rem;
-								border-bottom: 1px solid #DDDDDD;
-								transition: all .3s ease;
 							}
 							
 						}
@@ -159,6 +220,15 @@
 	.copy-cards {
 		position: relative;
 		
+		.grid-x {
+			margin-right: -0.5rem;
+			margin-left: -0.5rem;
+			>.cell {
+				padding-right: 0.5rem;
+				padding-left: 0.5rem;
+			}
+		}
+		
 		@include breakpoint(small down) {
 			padding: 0 2rem;
 		}
@@ -169,7 +239,7 @@
 		}
 		
 		.copy-card {
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 		}
 		
 		.accordion {

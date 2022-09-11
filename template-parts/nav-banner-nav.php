@@ -87,7 +87,7 @@
 										<?php } else { ?>
 										
 											<div class="cell shrink relative">
-												<span><?php the_title(); ?></span>
+												<span class="is-active"><?php the_title(); ?></span>
 											</div>
 											
 										<?php };?>
@@ -140,6 +140,11 @@
 								<?php endif;?>
 							
 						</div>
+					</div>
+					<div class="hide-for-medium chev-wrap">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24.447" height="13.638" viewBox="0 0 24.447 13.638">
+						  <path id="Path_794" data-name="Path 794" d="M281,13884.472l11.516,11.517,11.516-11.517" transform="translate(-280.293 -13883.765)" fill="none" stroke="#019fdb" stroke-width="2"/>
+						</svg>
 					</div>
 				</nav>
 			</div>

@@ -88,6 +88,12 @@
 		.img-wrap {
 			position: relative;
 			@include flush-left;
+			@include breakpoint(medium down) {
+				padding-right: 1rem;
+				&:after {
+					right: 1rem;
+				}
+			}
 		}
 		@include breakpoint(medium down) {
 
@@ -118,6 +124,12 @@
 		padding-right: 0;
 		.img-wrap {
 			@include flush-right;
+			@include breakpoint(medium down) {
+				padding-left: 1rem;
+				&:after {
+					left: 1rem;
+				}
+			}
 		}
 		@include breakpoint(medium down) {
 			margin-bottom: -7rem;
@@ -164,6 +176,7 @@
 					content: '';
 					position: absolute;
 					z-index: -1;
+					width: 200vw;
 					left: -2rem;
 					right: -2rem;
 					height: 50%;
