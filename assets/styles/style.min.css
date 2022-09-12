@@ -8026,6 +8026,10 @@ BACKGROUND COLORS
 /*********************
 RE-USED ELEMENTS
 *********************/
+.page-template-default .entry-content {
+  position: relative;
+}
+
 .inner-content {
   overflow: hidden;
 }
@@ -8719,7 +8723,7 @@ header.site-header #top-bar-menu #main-nav {
 }
 header.site-header #top-bar-menu .region-nav > li,
 header.site-header #top-bar-menu #main-nav > li {
-  margin: 0 0.3rem 1rem;
+  margin: 0 0.3rem 0rem;
 }
 header.site-header #top-bar-menu .region-nav > li > a,
 header.site-header #top-bar-menu #main-nav > li > a {
@@ -8728,7 +8732,7 @@ header.site-header #top-bar-menu #main-nav > li > a {
   font-size: 1.3125rem;
   text-transform: uppercase;
   letter-spacing: 2.1px;
-  padding: 1.78rem 0.5rem;
+  padding: 1.78rem 0.5rem 1.78rem;
   position: relative;
 }
 @media print, screen and (min-width: 56.25em) {
@@ -9685,8 +9689,8 @@ footer#colophon .copyright {
   color: #fff;
   position: absolute;
   z-index: 1;
-  left: -2rem;
-  right: -2rem;
+  left: 0;
+  right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -9729,13 +9733,12 @@ footer#colophon .copyright {
 }
 @media print, screen and (min-width: 56.25em) {
   .page-template-page-home .hero-bottom .bg {
-    background-position: 100% 0%;
+    background-position: 50% 0%;
   }
 }
 .page-template-page-home .hero-bottom .region-link {
   position: relative;
   padding-bottom: 3rem;
-  margin-left: -1rem;
 }
 .page-template-page-home .hero-bottom .img-copy-card {
   position: relative;

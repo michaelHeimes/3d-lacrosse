@@ -7,8 +7,8 @@
 			color: $white;
 			position: absolute;
 			z-index: 1;
-			left: -2rem;
-			right: -2rem;
+			left: 0;
+			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
 			h1 {
@@ -39,13 +39,13 @@
 			top: -17rem;
 			background-position: -200% 0%;
 			@include breakpoint(tablet) {
-				background-position: 100% 0%;
+				background-position: 50% 0%;
 			}
 		}
 		.region-link {
 			position: relative;
 			padding-bottom: 3rem;
-			margin-left: -1rem;
+			//margin-left: -1rem;
 		}
 		.img-copy-card {
 			position: relative;

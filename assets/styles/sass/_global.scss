@@ -27,6 +27,11 @@ BACKGROUND COLORS
 /*********************
 RE-USED ELEMENTS
 *********************/
+.page-template-default {
+	.entry-content {
+		position: relative;
+	}
+}
 .inner-content {
 	overflow: hidden;
 }
