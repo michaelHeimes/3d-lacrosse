@@ -58,11 +58,7 @@ $card_rows = $fields['card_rows'];
 												$image = $row_card['image'];
 												if( !empty( $image ) ): ?>
 												<div class="left image-wrap cell shrink">
-													<div class="circle">
-	
-														<img src="<?php echo $image['sizes']['team-photo']; ?>" width="129px" alt="<?php echo $image['caption']; ?>" />
-													</div>
-													<?php get_template_part('template-parts/icons-svgs/three-stripes');?>
+													<img src="<?php echo $image['sizes']['team-photo']; ?>" width="129px" alt="<?php echo $image['caption']; ?>" />
 												</div>
 												<?php endif; ?>
 												<div class="right cell auto">

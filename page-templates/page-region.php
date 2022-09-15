@@ -118,6 +118,7 @@ $image = get_field('logo');
 											<?php 
 												$bio_cards = get_field('bio_cards');
 												if( !empty($bio_cards) ):
+													$row = 1;
 													foreach($bio_cards as $bio_card):
 														$bio_card_fields = $bio_card['bio_card'];
 
@@ -126,11 +127,12 @@ $image = get_field('logo');
 															'name' => $bio_card_fields['name'],
 															'title_&_affiliation' => $bio_card_fields['title_&_affiliation'],
 															'bio' => $bio_card_fields['bio'],
+															'row' => $row 
 														);
 
 													get_template_part('template-parts/loop', 'team-card', $args);
 
-													endforeach;
+													$row++; endforeach;
 												endif;
 											?>
 										</div>

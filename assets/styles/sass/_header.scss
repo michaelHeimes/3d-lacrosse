@@ -4,6 +4,11 @@ header.site-header {
 	z-index: 555;
 	transition: transform .5s ease;
 	
+	.top-bar {
+		max-width: 1600px;
+		margin: auto;
+	}
+	
 	.top-bar-wrap {
 		background-color: $topbar-background;
 	}
@@ -29,10 +34,8 @@ header.site-header {
 		li.logo {
 			width: 64px;
 			height: 64px;
-			
-			@include breakpoint(medium) {
-
-			}
+			position: relative;
+			z-index: 2;
 			@include breakpoint(tablet) {
 				width: 102px;
 				height: 102px;
@@ -51,23 +54,24 @@ header.site-header {
 		.region-nav,
 		#main-nav {
 			align-items: center;
+			a {
+				font-family: $font-jockey;
+				color: $text-gray;
+				font-size: rem-calc(21);
+				text-transform: uppercase;
+				letter-spacing: 2.1px;
+				padding: 1.78rem 0.5rem 1.78rem;
+				position: relative;
+				
+				@include breakpoint(tablet) {
+					font-size: rem-calc(14);
+					letter-spacing: 1.4px;
+				}
+			}
 			>li {
 				margin: 0 .3rem 0rem;
 				
-				> a {
-					font-family: $font-jockey;
-					color: $text-gray;
-					font-size: rem-calc(21);
-					text-transform: uppercase;
-					letter-spacing: 2.1px;
-					padding: 1.78rem 0.5rem 1.78rem;
-					position: relative;
-					
-					@include breakpoint(tablet) {
-						font-size: rem-calc(14);
-						letter-spacing: 1.4px;
-					}
-					
+				> a {					
 					span {
 						&:before {
 							content: '';
@@ -82,7 +86,7 @@ header.site-header {
 				&:hover {
 
 				}
-					
+				
 				}
 				
 			&.is-active,
@@ -115,6 +119,24 @@ header.site-header {
 		
 		ul#main-nav {
 			margin-right: -0.8rem;
+			ul.submenu {
+				min-width: 150px;
+				background-color: $white;
+				li {
+					a {
+						padding: .5rem 1.5rem;
+						&:hover {
+							color: $brand-blue;
+						}
+					}
+					&:first-child a {
+						padding-top: 1rem;
+					}
+					&:last-child a {
+						padding-bottom: 1rem;
+					}
+				}
+			}
 		}
 		
 		.region-nav {
@@ -130,7 +152,15 @@ header.site-header {
 				align-items: flex-start;
 				justify-content: flex-end;
 				top: 70px;
-				left: 140px;
+				margin-left: 140px;
+				
+				@include breakpoint(xxlarge) {
+					flex-wrap: nowrap;
+					left: 0;
+					right: 0;
+					max-width: 1600px;
+					margin: auto;
+				}
 				
 				li {
 					padding-right: 0.9375rem;

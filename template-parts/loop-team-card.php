@@ -1,5 +1,5 @@
 <?php
-	$row = get_row_index();
+	$row = $args['row'];
 	$image = $args['photo'];
 	$name = $args['name'];
 	$title_affiliation = $args['title_&_affiliation'];
