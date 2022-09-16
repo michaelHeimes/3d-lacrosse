@@ -43,9 +43,7 @@
 		</h1>
 		
 		<?php 
-			if( !is_page_template('page-templates/page-our-team.php') ) {
-				get_template_part('template-parts/nav-banner-nav');
-			}
+			get_template_part('template-parts/nav-banner-nav');
 		?>
 	</div>
 	

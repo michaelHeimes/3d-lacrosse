@@ -1,6 +1,7 @@
 <?php 
 	global $post;
 	$current = get_post($post->ID);
+	$children = get_pages( array( 'child_of' => $post->ID ) );
 	if($current->post_parent){      
 		  $parent = get_post($current->post_parent);
 		  if($parent->post_parent){
@@ -9,7 +10,7 @@
 	}	
 ?>
 
-<?php if( !is_page_template() ) :
+<?php if( !is_page_template() && (count( $children ) == 0 ) ) :
 	$page_modules = get_field('page_modules');
 		if( !empty($page_modules) ):
 			$show_page_nav = false;
@@ -60,7 +61,7 @@
 		endif;
 endif;?>
 
-<?php if(!empty(get_pages(['child_of' => get_queried_object_id()]) ) ):?>
+<?php if ( is_page() && ($post->post_parent || count( $children ) > 0  )):?>
 <div class="child-sibling-links">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
