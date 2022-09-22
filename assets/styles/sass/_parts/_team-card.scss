@@ -56,6 +56,9 @@
 
 .team-card {
 	margin-bottom: 0.8rem;
+	.inner {
+		height: 100%;
+	}
 	@include breakpoint(medium) {
 		margin-bottom: 2.5rem;
 	}

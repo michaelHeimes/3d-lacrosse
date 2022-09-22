@@ -12,6 +12,8 @@
 					get_template_part('template-parts/modules/graphical-callout');
 				elseif( get_row_layout() == 'image_&_copy_card' ):
 					get_template_part('template-parts/modules/part-image-copy-card');
+				elseif( get_row_layout() == 'region_navigation' ):
+					get_template_part('template-parts/modules/region-navigation');
 				elseif( get_row_layout() == 'text' ):
 					get_template_part('template-parts/modules/text');
 				endif;
