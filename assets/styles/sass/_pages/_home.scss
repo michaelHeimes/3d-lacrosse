@@ -6,7 +6,7 @@
 		.hero-heading {
 			color: $white;
 			position: absolute;
-			z-index: 1;
+			z-index: 2;
 			left: 0;
 			right: 0;
 			top: 50%;
@@ -33,13 +33,20 @@
 		@include breakpoint(tablet) {
 			padding-bottom: 10rem;
 		}
+		@include breakpoint(xxlarge) {
+			margin-bottom: 8rem;
+		}
 		.bg {
 			@include absolute-cover;
 			right: -2rem;
-			top: -17rem;
-			background-position: -200% 0%;
+			top: -12rem;
+			background-position: 100% 0%;
 			@include breakpoint(tablet) {
-				background-position: 50% 0%;
+				top: -20rem;
+				background-position: 100% 0%;
+			}
+			@include breakpoint(xxlarge) {
+				background-size: cover;
 			}
 		}
 		.region-link {
@@ -59,21 +66,22 @@
 						position: absolute;
 						left: 0;
 						right: 0;
-						bottom: 100%;
-						height: 19rem;
-						background: url(../images/header-bg-top.svg);
+						bottom: 99%;
+						height: 12rem;
+						height: 50vw;
+						background: url(../images/header-bg-top-flatBottom.svg);
 						background-repeat: no-repeat;
-						background-position: 100% 50%;
+						background-position: 50% 50%;
 						background-size: cover;
 					}
 					&:after {
 						content: '';
 						position: absolute;
-						left: 0;
+						left: -1rem;
 						right: 0;
 						top: 100%;
 						height: 4rem;
-						background: url(../images/header-bg-bottom.svg);
+						background: url(../images/header-bg-bottom-flatTop.svg);
 						background-repeat: no-repeat;
 						background-position: 50% 100%;
 						background-size: cover;
@@ -92,6 +100,10 @@
 	.img-copy-card {
 		position: relative;
 		padding-bottom: 5rem;
+	}
+	
+	#next {
+		transform: translateY(-100px);
 	}
 	
 	.find-region {
@@ -118,6 +130,7 @@
 			}
 			@include breakpoint(tablet) {
 				position: static !important;
+				display: block;
 				padding: 0;
 				width: 100%;
 				border: 0;

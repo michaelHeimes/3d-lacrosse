@@ -6,7 +6,7 @@
  *
  * @package 3D_Lacrosse
  */
- 
+  
 get_header();
 $fields = get_fields();
 $card_rows = $fields['card_rows'];
@@ -49,7 +49,7 @@ $card_rows = $fields['card_rows'];
 								<?php endif;?>
 								
 								<?php if ( !empty($row_cards) ):?>
-								<div class="row-cards grid-x grid-padding-x small-up-2 medium-up-2 tablet-up-3">
+								<div class="row-cards grid-x grid-padding-x small-up-2 medium-up-2 large-up-3">
 									<?php foreach($row_cards as $row_card):?>
 									
 										<div class="cell single-alumni">
@@ -57,11 +57,11 @@ $card_rows = $fields['card_rows'];
 												<?php 
 												$image = $row_card['image'];
 												if( !empty( $image ) ): ?>
-												<div class="left image-wrap cell shrink">
+												<div class="left image-wrap cell small-6 tablet-5">
 													<img src="<?php echo $image['sizes']['team-photo']; ?>" width="129px" alt="<?php echo $image['caption']; ?>" />
 												</div>
 												<?php endif; ?>
-												<div class="right cell auto">
+												<div class="right cell small-6 tablet-7">
 													<h3 class="h4"><?php echo $row_card['name'];?></h3>
 													<p><?php echo $row_card['team'];?></p>
 													<p><?php echo $row_card['region'];?></p>

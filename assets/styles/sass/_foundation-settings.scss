@@ -154,7 +154,8 @@ $header-styles: (
 	'h3': ('font-size': 30),
 	'h4': ('font-size': 18),
 	'h5': ('font-size': 16),
-	'h6': ('font-size': 12),
+	'h6': ('font-size': 16),
+  'h7': ('font-size': 16),
   ),
   "medium": (
 	'h1': ('font-size': 71),
@@ -162,7 +163,8 @@ $header-styles: (
 	'h3': ('font-size': 30),
 	'h4': ('font-size': 20),
 	'h5': ('font-size': 16),
-	'h6': ('font-size': 12),
+	'h6': ('font-size': 16),
+  'h7': ('font-size': 16),
   ),
 );
 $header-text-rendering: optimizeLegibility;

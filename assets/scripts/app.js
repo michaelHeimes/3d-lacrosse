@@ -147,7 +147,6 @@
             let $toggleBtn = $($pageNav).find('#page-nav-toggle');
             let $currentPage = $($pageNav).find('.is-active');
             let $currentPageTitle = $currentPage.text();
-            console.log($currentPage);
                         
             $($toggleBtn).click(function(e){
                 e.preventDefault();

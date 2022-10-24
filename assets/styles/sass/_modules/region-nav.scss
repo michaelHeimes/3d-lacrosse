@@ -26,8 +26,7 @@
 					
 					@include breakpoint(tablet) {
 						margin: 1rem;
-						width: auto;
-						flex: 0 0 auto;
+						width: 100%;
 						max-width: 138px;
 					}
 				
@@ -60,8 +59,11 @@
 					}
 					
 						span.icon {
+							display: block;
+							width: 100%;
 							max-width: 94px;
-							img {
+							img,
+							svg {
 								width: 100%;
 							}
 						}
